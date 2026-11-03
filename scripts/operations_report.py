@@ -29,6 +29,9 @@ def mdtable(frame):
     return '\n'.join(lines+['| '+' | '.join(str(v) for v in row)+' |' for row in frame.itertuples(index=False,name=None)])
 schedule_runs=[r for r in runs if r['event']=='schedule' and r['conclusion']=='success']
 schedule_note=(f"已核验 {len(schedule_runs)} 次 schedule 事件成功；实际运行收据见 validation/github_collection_runs.json。" if schedule_runs else '已核验 push 触发成功、归档实际存在并可恢复；目前保存的收据尚无 schedule 事件成功记录，不能据此宣称定时连续性已获长期验证。')
+relocated=''
+if (reports/'validation/relocated_delivery.json').exists():
+    relocated='- 交付ZIP已解压到另一路径，在相同已安装依赖下用 --reuse-rides 实际重跑48小时，再独立核对181条路线；服务/搬运数量完全相同。限时启发式产生另一条可行Greedy路线，距离略有变化，未伪称逐bit一致。收据见 validation/relocated_delivery.json。\n'
 text=f'''# 最后工程补充：道路运输服务联立与持续库存采集
 
 原项目指南中的数据、预测、整数优化、配对事件、天气、随机多期、网络扩展均已有实际结果。本轮补齐道路货车和服务联立，以及可持续运行的库存采集部署。**{tests} 项测试通过**，并独立核对 {checks['routes']} 条运输路线。原十页英文研究报告仍保留基线；本补充记录新增工程和不利结果。
@@ -68,6 +71,7 @@ GitHub 首轮实际归档下载后恢复出 {restored['polls']} 个poll、{resto
 - {tests} pytest通过；新增测试覆盖装载/先取后送、原卡车持货、不可行丢单、客户先取走库存、道路延迟、满桩后携货重送、标记变化保留、失败心跳、幂等恢复与防损坏清理。
 - scripts/check_transport.py 从已保存路线/真实货物事件独立重算道路时间、装卸时点、容量、工时、预算、truck-km及随载bike-km，核对同请求/基线预测/过去初态与车队总账；{checks['routes']} 条路线全部通过。
 - 原全年官方结果和历史/天气/六个时长/MPC/60站结果已再次独立核验，原始基线保留；已有三份执行后的notebook。
+{relocated}
 
 ```bash
 ./scripts/install.sh

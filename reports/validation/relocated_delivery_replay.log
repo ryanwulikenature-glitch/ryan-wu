@@ -1,0 +1,8 @@
+2025-11-04 13:00:00+00:00 to 2025-11-06 13:00:00+00:00: 47,470 paired recorded rides, 48 hours, 30 stations
+strategy,departure_requests,served_departures,unmet_departures,served_returns,blocked_arrivals,suppressed_returns,picked_bikes,delivered_bikes,failed_pickup_bikes,blocked_transfer_attempts,planned_bikes,unassigned_bikes,truck_km,bike_km,driver_seconds,flow_solver_fallbacks,route_solver_failures,dispatch_busy_skips,instant_bikes,proxy_service_rate,driver_hours,proxy_cost,resource_class
+instant_milp_relaxation,25844,24424,1420,24341,511,1411,0,0,0,0,0,0,0.0,740.5574,0,0,0,0,576,0.945054945054945,0.0,9729.05574,instantaneous resource relaxation
+none,25844,24494,1350,24429,437,1348,0,0,0,0,0,0,0.0,0.0,0,0,0,0,0,0.9477635041015323,0.0,8935.0,no intervention
+road_greedy,25844,24402,1442,24326,518,1440,576,576,0,0,576,0,1068.6227,550.0204,236765,0,0,0,0,0.9442036836403034,65.76805555555555,9855.00204,equal road-fleet scenario
+road_milp,25844,24422,1422,24338,512,1413,576,576,0,0,576,0,1171.1813,935.808,252329,0,0,0,0,0.944977557653614,70.09138888888889,9763.5808,equal road-fleet scenario
+
+PASS: event-level dock/truck bounds and complete fleet accounting

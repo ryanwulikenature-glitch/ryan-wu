@@ -1,0 +1,21 @@
+{
+  "snapshot_created_utc": "2026-11-03T08:19:51.978843+00:00",
+  "polls": 44,
+  "observations": 1320,
+  "first_poll_utc": "2026-11-03T07:35:07.760597+00:00",
+  "last_poll_utc": "2026-11-03T08:19:16.996804+00:00",
+  "observed_span_minutes": 44.15393678333333,
+  "max_poll_gap_seconds": 138.251566,
+  "poll_status_counts": {
+    "ok": 44
+  },
+  "quality_counts": {
+    "stale_or_future_source_report": 44,
+    "station_absent_from_information": 88,
+    "valid": 1188
+  },
+  "sqlite_sha256": "a19a2e2542cea1b073bfb577fbc344b6c9dfb8fc7613dae74a0167c11b712162",
+  "snapshot_integrity": "ok",
+  "scope": "Actual dated prospective samples only; no inference of states between polls or 2025 backfill",
+  "scheduling": "Local target 60s while VM alive; GitHub target 5min best effort, independent public gbfs-history branch; inspect actual run receipts"
+}

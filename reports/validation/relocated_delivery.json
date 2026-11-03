@@ -1,0 +1,38 @@
+{
+  "source": "Integrity-checked ZIP extracted to /tmp/citibike-delivery-check/citibike_project",
+  "environment": "Same installed Python 3.12 dependency environment; relocated source/data path, not a fresh-machine installation",
+  "command": "python scripts/transport_experiment.py --reuse-rides; python scripts/check_transport.py",
+  "hours": 48,
+  "paired_rides": 47470,
+  "policy_count": 4,
+  "retained_ride_sha256": "871097e154627952eae532cbb879cdb0d3f15b9a2c7647bca9b1b300d705a7e5",
+  "service_and_transfer_counts_exact_match": true,
+  "independent_saved_route_and_actual_cargo_checks": "passed",
+  "transport_differences": [
+    {
+      "strategy": "instant_milp_relaxation",
+      "truck_km": 0.0,
+      "bike_km": 0.0,
+      "driver_seconds": 0
+    },
+    {
+      "strategy": "none",
+      "truck_km": 0.0,
+      "bike_km": 0.0,
+      "driver_seconds": 0
+    },
+    {
+      "strategy": "road_greedy",
+      "truck_km": -0.22510000000011132,
+      "bike_km": 2.8618000000000166,
+      "driver_seconds": -55
+    },
+    {
+      "strategy": "road_milp",
+      "truck_km": 0.0,
+      "bike_km": 0.0,
+      "driver_seconds": 0
+    }
+  ],
+  "limitation": "Time-limited routing heuristic produced a different feasible Greedy route. Exact path/transport metric reproducibility is not claimed; original captured reference outputs are retained."
+}

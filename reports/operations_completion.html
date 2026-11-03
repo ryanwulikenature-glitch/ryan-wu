@@ -82,11 +82,11 @@
 
 本地独立进程每60秒目标采集官方 station_information/status；云机器停止后本地进程不再工作。GitHub公开仓库 Actions 每5分钟目标调度，源码工作流已部署，结果写入独立 [gbfs-history 分支](https://github.com/ryanwulikenature-glitch/ryan-wu/tree/gbfs-history)。已核验 push 触发成功、归档实际存在并可恢复；目前保存的收据尚无 schedule 事件成功记录，不能据此宣称定时连续性已获长期验证。
 
-GitHub 首轮实际归档下载后恢复出 1 个poll、30 条站点观察，SQLite integrity_check=ok。Actions正常启用且仓库公开时使用公开runner免费额度；cron可能排队、延迟或停用，不保证严格五分钟间隔。健康检查应看真实时间戳，不能把YAML声明当作长期运行证据。
+GitHub 首轮实际归档下载后恢复出 2 个poll、60 条站点观察，SQLite integrity_check=ok。Actions正常启用且仓库公开时使用公开runner免费额度；cron可能排队、延迟或停用，不保证严格五分钟间隔。健康检查应看真实时间戳，不能把YAML声明当作长期运行证据。
 
-截至静态快照 2026-11-03T08:07:13.095785+00:00，本地保存 **31 个实际poll、930 条站点观察**，首末采集 2026-11-03T07:35:07.760597+00:00 → 2026-11-03T08:06:16.995690+00:00，实际跨度 31.15 分钟，最大间隔 138.25 秒。这是当前实采窗口，不是全年或长年库存。
+截至静态快照 2026-11-03T08:19:51.978843+00:00，本地保存 **44 个实际poll、1320 条站点观察**，首末采集 2026-11-03T07:35:07.760597+00:00 → 2026-11-03T08:19:16.996804+00:00，实际跨度 44.15 分钟，最大间隔 138.25 秒。这是当前实采窗口，不是全年或长年库存。
 
-所有站点每次poll均保留，包括数量未变、只改标记、已移除/未匹配站点、陈旧源报告与获取失败。当前质量计数：`{&quot;stale_or_future_source_report&quot;: 31, &quot;station_absent_from_information&quot;: 62, &quot;valid&quot;: 837}`；未知站点绝不当作关闭或零需求。
+所有站点每次poll均保留，包括数量未变、只改标记、已移除/未匹配站点、陈旧源报告与获取失败。当前质量计数：`{&quot;stale_or_future_source_report&quot;: 44, &quot;station_absent_from_information&quot;: 88, &quot;valid&quot;: 1188}`；未知站点绝不当作关闭或零需求。
 
 归档保存源更新时间、抓取时间、源体SHA256、标准化库存/容量/全部运营标记和选中站点原始字段。原始全网JSON保留7天；SQLite工作集保留30天，旧数据写入持久每日gzip JSONL，重读核对每个字段/数量/完整内容SHA256后才清理。损坏、少行或同ID改值都拒绝清理。静态可恢复副本为 reports/evidence/telemetry/inventory.sqlite 和 archive/；使用SQLite backup在活跃写入时取得一致快照。
 
@@ -97,6 +97,8 @@ GitHub 首轮实际归档下载后恢复出 1 个poll、30 条站点观察，SQL
 - 54 pytest通过；新增测试覆盖装载/先取后送、原卡车持货、不可行丢单、客户先取走库存、道路延迟、满桩后携货重送、标记变化保留、失败心跳、幂等恢复与防损坏清理。
 - scripts/check_transport.py 从已保存路线/真实货物事件独立重算道路时间、装卸时点、容量、工时、预算、truck-km及随载bike-km，核对同请求/基线预测/过去初态与车队总账；181 条路线全部通过。
 - 原全年官方结果和历史/天气/六个时长/MPC/60站结果已再次独立核验，原始基线保留；已有三份执行后的notebook。
+- 交付ZIP已解压到另一路径，在相同已安装依赖下用 --reuse-rides 实际重跑48小时，再独立核对181条路线；服务/搬运数量完全相同。限时启发式产生另一条可行Greedy路线，距离略有变化，未伪称逐bit一致。收据见 validation/relocated_delivery.json。
+
 
 ```bash
 ./scripts/install.sh

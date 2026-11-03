@@ -1,0 +1,8 @@
+{
+  "status": "saved",
+  "requires_publish": true,
+  "source": "cloud_environment_onboarding_update_environment_config_draft",
+  "scope": "Install script and startup instructions saved; repository membership/network/secret bindings preserved",
+  "publication": "Not performed: available tool saves draft only; review/save/publish in environment settings enables future-task snapshot",
+  "fresh_task_restore_verified": false
+}

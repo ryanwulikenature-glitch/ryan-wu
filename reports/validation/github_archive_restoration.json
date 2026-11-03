@@ -1,6 +1,15 @@
 {
-  "polls": 1,
-  "observations": 30,
+  "verification_utc": "2026-11-03T08:18:48.036572+00:00",
+  "archive_branch_head": "92f57fe53ebe84ff54831a8e8fd40f78904a1946",
+  "workflow_state": "active",
+  "polls": 2,
+  "observations": 60,
   "integrity_check": "ok",
-  "workflow_state": "active"
+  "latest_poll_utc": "2026-11-03T08:13:48.336796+00:00",
+  "downloaded_sha256": {
+    "README.md": "fb0d314ce36f1f2ea1b223e235e5f5c5b2e885f132b99ddd8507450497a64a68",
+    "STATUS.json": "ed0c4a292531f91113f447980ad89f4b1eb0d576ef4b9f89a7a7f4eba3cda765",
+    "data/2026-11-03.jsonl.gz": "7b64fabc96bd4f0bbf08658ac4c35ee4897c7c079c9c7ff22ae700a62851d492"
+  },
+  "scheduled_successes_observed": 0
 }
