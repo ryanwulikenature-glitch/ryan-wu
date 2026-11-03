@@ -48,3 +48,5 @@ The count simulator uses shared seeded exogenous arrivals. The separate paired-e
 ```
 
 Two live samples have been collected for both current feeds, 2,518 stations per feed/sample. JSON, SQLite inventory rows and failure logs are retained separately under data/gbfs. Long-term observation needs continued scheduled execution. Current station IDs/capacities must not be treated as verified 2025 identifiers or history. Weather, multi-period stochastic optimization and truck VRP remain optional future research; they are not claimed as implemented.
+
+Published repository: https://github.com/ryanwulikenature-glitch/ryan-wu (main). Source, reports and small evidence tables are pushed; raw data/models are regenerated or included in the separate project ZIP.

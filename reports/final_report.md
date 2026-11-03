@@ -90,7 +90,7 @@ Completed rides are a censored sample of potential demand. Capacities, starting 
 
 The saved outputs provide observed-rides forecasting and assumption-dependent scenario results. Read the metrics and uncertainty tables before drawing any performance conclusion.
 
-All numeric results above were read from generated files. See tests output for executed checks and README for reproduction. Optional routing, stochastic optimization, network expansion and prospective inventory collection are documented extensions, not claimed as executed.
+All numeric results above were read from generated files. See tests output for executed checks and README for reproduction. Routing, stochastic multi-period optimization and network expansion remain future work. The prospective GBFS collector has two live samples; long-term inventory monitoring is not claimed.
 
 ## Explicit recorded-event estimand
 

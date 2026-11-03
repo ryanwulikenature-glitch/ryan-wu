@@ -25,7 +25,7 @@ OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -m src.train --data da
 .venv/bin/python -m src.simulate --predictions outputs/demo/test_predictions.csv.gz --stations data/demo/stations.csv --config data/demo/config.json --out outputs/demo --hours 336
 ```
 
-原始数据、模型和大输出在 `.gitignore` 中排除；当前工作区与交付压缩包保留已运行的 demo 结果。没有自动提交或推送 GitHub。
+原始数据、模型和大输出在 `.gitignore` 中排除；当前工作区与交付压缩包保留已运行的 demo 结果。已按新增清单要求提交并推送至 GitHub main。
 
 ## 真实数据流程
 
@@ -87,7 +87,7 @@ tests/                     清洗、泄漏、MILP、仿真守恒及失败状态�
 
 ## 解释边界与后续
 
-历史已完成骑行不包含所有潜在需求；缺乏历史库存无法识别真实缺车和满桩损失。服务代理、人工惩罚与 bike-km 都只属于给定情景，不是实际用户损失、美元成本或货车路程。可选天气需要带预测发布时间的可用特征；本工程没有使用事后天气。GBFS 前瞻采集、多期随机优化、货车路径、严格行政多边形与网络扩容属于后续扩展，未宣称已经完成。
+历史已完成骑行不包含所有潜在需求；缺乏历史库存无法识别真实缺车和满桩损失。服务代理、人工惩罚与 bike-km 都只属于给定情景，不是实际用户损失、美元成本或货车路程。可选天气需要带预测发布时间的可用特征；本工程没有使用事后天气。GBFS 前瞻采集器已实现并实采；长期库存观测、多期随机优化、货车路径、严格行政多边形与网络扩容仍是后续扩展。
 
 ## 明确的档案计数实验模式
 
@@ -117,3 +117,5 @@ OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MPLCONFIGDIR=/tmp/citibike-mpl \
 - 英文复现入口 README_EN.md；关键结果的小文件已同步到 reports/results，便于在 GitHub 直接查看。
 - 当前 GBFS 采集：`.venv/bin/python -m src.collect_gbfs --samples 2 --interval 60`。原始 JSON、SQLite 和失败日志写入 data/gbfs；已经实际采集两轮、每轮两种 feed 各 2,518 站。长期采集需要运行该命令或持续调度；当前样本不代表已有多年库存数据库，当前站点 ID 也不自动等同 2025 Trip Histories ID。
 - VRP 真实货车路径与随机多期优化仍属于清单中的后续研究方向，不冒充已实现或已运行的功能。
+
+GitHub 已发布：https://github.com/ryanwulikenature-glitch/ryan-wu （main）；英文报告和结果小表在仓库内可直接查看。

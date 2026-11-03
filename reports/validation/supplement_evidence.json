@@ -1,0 +1,12 @@
+{
+  "pytest_passed": 30,
+  "english_report_pages": 8,
+  "gbfs_samples": 2,
+  "gbfs_stations_per_feed": 2518,
+  "gbfs_database_rows": 10072,
+  "gbfs_scope": "current snapshots only; no 2025 backfill",
+  "extra_eda_figures": 2,
+  "vrp_and_stochastic_multi_period": "optional future work, not implemented",
+  "github_repository": "https://github.com/ryanwulikenature-glitch/ryan-wu",
+  "github_branch": "main"
+}
