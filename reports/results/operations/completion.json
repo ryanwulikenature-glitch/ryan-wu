@@ -1,0 +1,58 @@
+{
+  "pytest_passed": 54,
+  "route_checks": {
+    "routes": 181,
+    "paired_rides": 47470,
+    "hours": 48,
+    "stations": 30,
+    "road_time_distance_service_and_depot": "passed",
+    "planned_and_actual_truck_capacity": "passed",
+    "pickup_before_delivery_and_actual_quantities": "passed",
+    "hourly_budget_and_driver_shifts": "passed",
+    "same_requests_baseline_forecasts_and_historical_anchor": "passed",
+    "fleet_balance_including_enroute_cargo": "passed",
+    "truck_km_and_load_weighted_bike_km": "passed",
+    "all_negative_results_retained": true
+  },
+  "telemetry_snapshot": {
+    "snapshot_created_utc": "2026-11-03T08:07:13.095785+00:00",
+    "polls": 31,
+    "observations": 930,
+    "first_poll_utc": "2026-11-03T07:35:07.760597+00:00",
+    "last_poll_utc": "2026-11-03T08:06:16.995690+00:00",
+    "observed_span_minutes": 31.153918216666668,
+    "max_poll_gap_seconds": 138.251566,
+    "poll_status_counts": {
+      "ok": 31
+    },
+    "quality_counts": {
+      "stale_or_future_source_report": 31,
+      "station_absent_from_information": 62,
+      "valid": 837
+    },
+    "sqlite_sha256": "7c54d86eadbe67f2050756339a205af886219492250b27bb03922b480fd2ac36",
+    "snapshot_integrity": "ok",
+    "scope": "Actual dated prospective samples only; no inference of states between polls or 2025 backfill",
+    "scheduling": "Local target 60s while VM alive; GitHub target 5min best effort, independent public gbfs-history branch; inspect actual run receipts"
+  },
+  "github_runs": [
+    {
+      "id": 41598241044,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-03T07:43:48Z",
+      "updated_at": "2026-11-03T07:44:04Z",
+      "html_url": "https://github.com/ryanwulikenature-glitch/ryan-wu/actions/runs/41598241044",
+      "head_sha": "78779a8d0c0eaab3a74dda3ab58927e82a95d4dc"
+    }
+  ],
+  "github_archive_restoration": {
+    "polls": 1,
+    "observations": 30,
+    "integrity_check": "ok",
+    "workflow_state": "active"
+  },
+  "schedule_success_observed": false,
+  "historical_hours_still_below_strong_criterion": 19632
+}

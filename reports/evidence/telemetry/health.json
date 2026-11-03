@@ -1,0 +1,10 @@
+{
+  "poll_id": "2026-11-03T08:06:16.995690+00:00_e4b2030a",
+  "started_utc": "2026-11-03T08:06:16.995690+00:00",
+  "completed_utc": "2026-11-03T08:06:17.622243+00:00",
+  "status": "ok",
+  "stations": 30,
+  "valid_station_reports": 27,
+  "source_errors": [],
+  "scope": "prospective; all polls retained including unchanged counts and flag-only changes"
+}

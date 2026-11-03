@@ -47,3 +47,23 @@ def test_retention_without_old_rows_keeps_current_database(tmp_path):
     live=tmp_path/'live';collect_once(live,['001'],get=provider())
     assert verified_prune(live/'inventory.sqlite',tmp_path/'archive','2000-01-01')==0
     with sqlite3.connect(live/'inventory.sqlite') as db:assert db.execute('SELECT count(*) FROM polls').fetchone()[0]==1
+
+def test_archive_with_same_poll_id_but_missing_rows_cannot_prune(tmp_path):
+    live=tmp_path/'live';archive=tmp_path/'archive';collect_once(live,['001'],get=provider())
+    export_archives(live/'inventory.sqlite',archive)
+    path=next((archive/'data').glob('*.gz'))
+    with gzip.open(path,'rt') as f:obj=json.loads(f.readline())
+    obj['observations']=[]
+    with gzip.open(path,'wt') as f:f.write(json.dumps(obj)+'\n')
+    with pytest.raises(ValueError,match='Incomplete archive'):verified_prune(live/'inventory.sqlite',archive,'2100-01-01')
+    with sqlite3.connect(live/'inventory.sqlite') as db:assert db.execute('SELECT count(*) FROM observations').fetchone()[0]==1
+
+def test_archive_count_preserving_tampering_cannot_prune(tmp_path):
+    live=tmp_path/'live';archive=tmp_path/'archive';collect_once(live,['001'],get=provider())
+    export_archives(live/'inventory.sqlite',archive)
+    path=next((archive/'data').glob('*.gz'))
+    with gzip.open(path,'rt') as f:obj=json.loads(f.readline())
+    obj['observations'][0]['bikes']+=1
+    with gzip.open(path,'wt') as f:f.write(json.dumps(obj)+'\n')
+    with pytest.raises(ValueError,match='checksum mismatch'):verified_prune(live/'inventory.sqlite',archive,'2100-01-01')
+    with sqlite3.connect(live/'inventory.sqlite') as db:assert db.execute('SELECT bikes FROM observations').fetchone()[0]==5

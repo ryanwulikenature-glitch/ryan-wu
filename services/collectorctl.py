@@ -15,5 +15,8 @@ if a.action=='start' and not state()['process_alive']:
     with open(out/'collector.log','ab') as log:
         subprocess.Popen([str(ROOT/'.venv/bin/python'),'-m','src.telemetry','--run','--interval','60'],cwd=ROOT,stdout=log,stderr=log,start_new_session=True)
     time.sleep(.5)
-elif a.action=='stop' and state()['process_alive']:os.kill(state()['process']['pid'],signal.SIGTERM)
+elif a.action=='stop' and state()['process_alive']:
+    os.kill(state()['process']['pid'],signal.SIGTERM)
+    deadline=time.monotonic()+5
+    while state()['process_alive'] and time.monotonic()<deadline:time.sleep(.1)
 print(json.dumps(state(),indent=2))

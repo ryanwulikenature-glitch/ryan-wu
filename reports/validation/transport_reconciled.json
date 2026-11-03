@@ -1,0 +1,14 @@
+{
+  "routes": 181,
+  "paired_rides": 47470,
+  "hours": 48,
+  "stations": 30,
+  "road_time_distance_service_and_depot": "passed",
+  "planned_and_actual_truck_capacity": "passed",
+  "pickup_before_delivery_and_actual_quantities": "passed",
+  "hourly_budget_and_driver_shifts": "passed",
+  "same_requests_baseline_forecasts_and_historical_anchor": "passed",
+  "fleet_balance_including_enroute_cargo": "passed",
+  "truck_km_and_load_weighted_bike_km": "passed",
+  "all_negative_results_retained": true
+}

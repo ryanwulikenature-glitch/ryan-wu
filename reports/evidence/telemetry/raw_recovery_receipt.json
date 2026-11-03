@@ -1,0 +1,12 @@
+{
+  "recovered_polls": 6,
+  "note": "Only complete real raw pairs were imported. HTTP 200 follows the original writer validation; feed retrieval times are original file-write bounds. No synthetic or backdated capture was created.",
+  "poll_ids": [
+    "2026-11-03T07:35:07.760597+00:00_4eb0f9ba",
+    "2026-11-03T07:36:07.760908+00:00_ab56852e",
+    "2026-11-03T07:37:07.761015+00:00_df873e0c",
+    "2026-11-03T07:38:07.761201+00:00_735cc585",
+    "2026-11-03T07:39:07.761354+00:00_8fed79e4",
+    "2026-11-03T07:40:07.761444+00:00_b3b841e9"
+  ]
+}

@@ -1,0 +1,5 @@
+strategy,timestamp,docked,truck_stock,in_transit,held_returns,initial_fleet,boundary_incoming,boundary_outgoing,accounted_fleet,departure_requests,served_departures,unmet_departures,served_returns,blocked_arrivals,suppressed_returns,picked_bikes,delivered_bikes,failed_pickup_bikes,blocked_transfer_attempts,planned_bikes,unassigned_bikes,truck_km,bike_km,driver_seconds,flow_solver_fallbacks,route_solver_failures,dispatch_busy_skips,instant_bikes
+none,2025-11-06 13:00:00+00:00,702,0,123,437,1085,21150,20973,1262,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+instant_milp_relaxation,2025-11-06 13:00:00+00:00,684,0,116,511,1085,21150,20924,1311,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+road_greedy,2025-11-06 13:00:00+00:00,691,0,123,518,1085,21150,20903,1332,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+road_milp,2025-11-06 13:00:00+00:00,683,0,116,512,1085,21150,20924,1311,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

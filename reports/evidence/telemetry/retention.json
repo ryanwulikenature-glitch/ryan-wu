@@ -1,0 +1,7 @@
+{
+  "checked_utc": "2026-11-03T08:03:17.622143+00:00",
+  "db_retention_days": 30,
+  "raw_retention_days": 7,
+  "archived_pruned_polls": 0,
+  "archive": "append-only daily gzip JSONL; all normalized states retained"
+}

@@ -23,6 +23,9 @@ if [ ! -f outputs/official/test_predictions.csv.gz ]; then ./scripts/official_pi
 .venv/bin/python scripts/stochastic_experiment.py | tee reports/validation/stochastic.log
 .venv/bin/python scripts/routing_experiment.py | tee reports/validation/routing.log
 .venv/bin/python scripts/network_expansion.py | tee reports/validation/network60.log
+# Retained directed OSRM matrix is a dated road proxy, not historical traffic.
+.venv/bin/python scripts/transport_experiment.py | tee reports/validation/transport_experiment.log
+.venv/bin/python scripts/check_transport.py | tee reports/validation/transport_checks.log
 .venv/bin/python scripts/history_report.py | tee reports/validation/history_report.log
 .venv/bin/python scripts/check_extensions.py | tee reports/validation/extensions_checks.log
 .venv/bin/python scripts/english_report.py
