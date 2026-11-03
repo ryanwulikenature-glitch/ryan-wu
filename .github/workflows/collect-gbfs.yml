@@ -1,0 +1,72 @@
+name: Prospective GBFS inventory archive
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/collect-gbfs.yml'
+      - 'src/telemetry.py'
+      - 'scripts/archive_telemetry.py'
+permissions:
+  contents: write
+concurrency:
+  group: gbfs-inventory-archive
+  cancel-in-progress: false
+jobs:
+  collect:
+    # Public repositories use free public-runner compute. Private automatic runs are skipped.
+    if: github.event.repository.private == false || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect one complete current poll
+        id: poll
+        continue-on-error: true
+        working-directory: source
+        run: python -m src.telemetry --out ../telemetry --no-raw
+      - name: Detect archive branch
+        id: branch
+        working-directory: source
+        run: |
+          if git ls-remote --exit-code --heads origin gbfs-history >/dev/null 2>&1; then
+            echo 'exists=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'exists=false' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        with:
+          path: archive
+          ref: ${{ steps.branch.outputs.exists == 'true' && 'gbfs-history' || 'main' }}
+      - name: Initialize archive branch if needed
+        if: steps.branch.outputs.exists == 'false'
+        working-directory: archive
+        run: |
+          git checkout --orphan gbfs-history
+          git rm -rf --ignore-unmatch .
+      - name: Append all states without count-based filtering
+        if: always()
+        run: |
+          if [ -f telemetry/inventory.sqlite ] && [ -d archive/.git ]; then
+            python source/scripts/archive_telemetry.py --db telemetry/inventory.sqlite --archive archive
+          fi
+      - name: Persist public prospective evidence
+        working-directory: archive
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md data
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record current GBFS heartbeat and station states'
+            git push origin HEAD:gbfs-history
+          fi
+      - name: Report feed failure after archiving the failed heartbeat
+        if: steps.poll.outcome == 'failure'
+        run: exit 1
