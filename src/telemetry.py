@@ -107,11 +107,11 @@ def run(out,station_ids,interval=60,max_polls=0):
         atomic_json(out/'service.json',{'pid':os.getpid(),'stopped_utc':now(),'state':'stopped','polls_this_process':count})
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--out',type=Path,default=ROOT/'data/telemetry');p.add_argument('--stations',type=Path,default=ROOT/'data/geography/original_station_audit.csv');p.add_argument('--run',action='store_true');p.add_argument('--interval',type=int,default=60);p.add_argument('--max-polls',type=int,default=0);p.add_argument('--no-raw',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--out',type=Path,default=ROOT/'data/telemetry');p.add_argument('--stations',type=Path,default=ROOT/'data/geography/original_station_audit.csv');p.add_argument('--run',action='store_true');p.add_argument('--interval',type=int,default=60);p.add_argument('--max-polls',type=int,default=0);p.add_argument('--no-raw',action='store_true');p.add_argument('--source-label',default='prospective only, not 2025 backfill');a=p.parse_args()
     import csv
     with open(a.stations,newline='') as f:ids=[r['station_id'] for r in csv.DictReader(f)]
     if a.run:
         if a.interval<60:p.error('Live interval must be at least 60 seconds')
         run(a.out,ids,a.interval,a.max_polls)
     else:
-        result=collect_once(a.out,ids,retain_raw=not a.no_raw);print(json.dumps(result,indent=2));raise SystemExit(0 if result['status']=='ok' else 1)
+        result=collect_once(a.out,ids,retain_raw=not a.no_raw,context={'scope':a.source_label});print(json.dumps(result,indent=2));raise SystemExit(0 if result['status']=='ok' else 1)

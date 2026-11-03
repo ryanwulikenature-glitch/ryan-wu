@@ -34,7 +34,9 @@ jobs:
         id: poll
         continue-on-error: true
         working-directory: source
-        run: python -m src.telemetry --out ../telemetry --no-raw
+        run: >-
+          python -m src.telemetry --out ../telemetry --no-raw
+          --source-label "github_actions_run=${GITHUB_RUN_ID}; attempt=${GITHUB_RUN_ATTEMPT}; event=${GITHUB_EVENT_NAME}; prospective only"
       - name: Detect archive branch
         id: branch
         working-directory: source
