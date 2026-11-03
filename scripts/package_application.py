@@ -5,8 +5,9 @@ ROOT=Path(__file__).resolve().parents[1];dest=ROOT.parent/'deliverables';dest.mk
 paths=[]
 for folder in ['application','models/frozen_2025','src','reports/results/application','reports/results/external_202601']:
     paths.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
-paths.extend(ROOT/p for p in ['PROJECT_OVERVIEW.md','README_EN.md','requirements-lock.txt','reports/technical_report.pdf','reports/optimization_formulation.md','reports/results/forecast_metrics.csv','reports/results/extensions/DATABASE_NOTICE.md','reports/results/operations/summary.csv','reports/validation/pytest.txt','reports/validation/pytest.xml','reports/validation/github_research_runs.json','reports/validation/monitoring_audit.json','reports/validation/application_reconciled.json','configs/external_202601.json'])
+paths.extend(ROOT/p for p in ['PROJECT_OVERVIEW.md','CONTRIBUTIONS.md','README_ZH.md','README_EN.md','requirements-lock.txt','reports/technical_report.pdf','reports/optimization_formulation.md','reports/results/forecast_metrics.csv','reports/results/extensions/DATABASE_NOTICE.md','reports/results/operations/summary.csv','reports/validation/pytest.txt','reports/validation/pytest.xml','reports/validation/github_research_runs.json','reports/validation/monitoring_audit.json','reports/validation/application_reconciled.json','configs/external_202601.json'])
 paths.extend(ROOT/p for p in ['scripts/external_202601.py','configs/official_counts.json','requirements.txt'])
+paths.append(ROOT/'README.md')
 paths.extend(ROOT/p for p in ['reports/validation/external_portable.json','reports/validation/external_202601.log'])
 manifest={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(set(paths))}
 archive=dest/'CitiBike_application_materials.zip'

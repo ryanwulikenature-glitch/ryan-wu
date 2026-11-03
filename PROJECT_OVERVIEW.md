@@ -2,7 +2,7 @@
 
 [![Research checks](https://github.com/ryanwulikenature-glitch/ryan-wu/actions/workflows/research-checks.yml/badge.svg)](https://github.com/ryanwulikenature-glitch/ryan-wu/actions/workflows/research-checks.yml)
 
-A computational research project on how uncertain count forecasts, imperfect state evidence and transport delays affect constrained resource allocation. The application is urban mobility; the methods connect to data science, stochastic optimization and financial engineering. Implementation and experiment execution were AI-assisted.
+A computational research project on how uncertain count forecasts, imperfect state evidence and transport delays affect constrained resource allocation. The application is urban mobility; the methods connect to data science, stochastic optimization and financial engineering. The [contribution and tool-use record](CONTRIBUTIONS.md) documents responsibilities and implementation assistance.
 
 Start with the [two-page research brief](application/RESEARCH_BRIEF.pdf), [ten-page technical report](reports/technical_report.pdf), or [scoped claims and evidence](application/CLAIMS_AND_EVIDENCE.csv). Source and results are available; this is a project, not a peer-reviewed publication or a live Citi Bike dispatch system.
 

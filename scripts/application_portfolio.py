@@ -62,19 +62,19 @@ Separate integer rebalancing and stochastic three-period MPC policies are evalua
 
 The 19,632 remaining unsupported station-hours ({100*protocol['remaining_fraction']:.2f}% of the annual panel) stay unknown. This annual strong-sampling mask differs from the 10,819 test rows failing the 15-minute start-state criterion. Change-filtered archives cannot prove continuous opening states or identify all rejected requests. The evidence-age audit is exploratory on an already examined test set; it is not a fresh holdout. Current driving roads, frozen capacity and an assumed depot are scenario inputs. Prospective collection is deployed, while long-term cadence is assessed only from actual dated receipts. {tests} local tests passed and [remote CI succeeded]({ci['html_url']}). Source, exact dependencies, executed notebooks, manifests, reports and integrity-checked delivery are available in the [repository](https://github.com/ryanwulikenature-glitch/ryan-wu).
 
-Implementation and experiment execution were AI-assisted. No peer-reviewed publication, real operator deployment, causal service improvement or sole manual authorship is claimed.
+[Contributions and tool use](../CONTRIBUTIONS.md) document project responsibilities and implementation assistance. Methods, evidence boundaries and scenario assumptions are reported above.
 '''
 (app/'RESEARCH_BRIEF.md').write_text(brief)
 cv=f'''# English CV project entries
 
-Use a version matching your actual contribution and target program. Project dates, supervisor and institution are deliberately omitted because they have not been established. This is a research project, not a publication. Implementation and execution were AI-assisted; see CONTRIBUTIONS.md.
+Editable project entries for the target program. Use verbs, dates and roles matching actual participation. See the [contribution and tool-use record](../CONTRIBUTIONS.md).
 
 ## General / data science
 
 **NYC Citi Bike Demand Forecasting & Rebalancing — Research Project**  
 Python · Pandas/PyArrow · XGBoost · SciPy MILP · OR-Tools
 
-- Developed an AI-assisted, reproducible pipeline processing 45.6M 2025 NYC rides into a 262,800-row, 30-station hourly panel; evaluated four next-hour count models with chronological train/validation/test splits.
+- Developed a reproducible pipeline processing 45.6M 2025 NYC rides into a 262,800-row, 30-station hourly panel; evaluated four next-hour count models with chronological train/validation/test splits.
 - Achieved pooled test departure MAE of {dep:.3f} versus {last:.3f} for a last-hour baseline ({gain:.1f}% lower); audited 2.91M historical state changes and identified a model-ranking reversal on 10,819 test rows lacking fresh start-state evidence.
 - Froze model hashes and protocol before acquiring January 2026 records; evaluated unchanged models on 22,320 new station-hours, with departure MAE {edep:.3f} versus {elast:.3f} for last-hour ({egain:.1f}% lower).
 - Evaluated integer/stochastic rebalancing and delayed truck routing with paired-event fleet accounting; retained negative service results and validated the implementation with {tests} tests and GitHub CI.
@@ -99,41 +99,37 @@ This is an urban operations project with transferable quantitative methods. Do n
 **Decision-Making under Uncertain Demand: Citi Bike Forecasting & Allocation — Research Project**  
 Python · Statistical Learning · Integer Optimization · Stochastic MPC · Scenario Simulation
 
-- Developed an AI-assisted forecasting/allocation research pipeline on 45.6M retained rides, combining chronological model evaluation with capacity-, distance- and budget-constrained integer decisions.
+- Developed a forecasting/allocation research pipeline on 45.6M retained rides, combining chronological model evaluation with capacity-, distance- and budget-constrained integer decisions.
 - Evaluated three-period stochastic MPC using correlated validation-residual scenarios and paired-event simulation; compared predictive error, service penalties and transport use under common requests.
 - Validated unchanged models on a separately frozen January 2026 period (22,320 station-hours), with departure MAE {edep:.3f} versus {elast:.3f} for last-hour, without refitting.
 - Audited incomplete state evidence and delayed execution: pooled departure MAE improved {gain:.1f}% over last-hour, while model ranking reversed on unsupported-start rows and road MILP failed to improve service in one scenario; preserved these limitations with {tests} tests and successful CI.
 
 ## SOP connection — editable
 
-The quantitative theme of my AI-assisted Citi Bike project was the interaction between uncertain forecasts, constrained resource allocation and delayed execution. I examined fixed point forecasts alongside scenario-based stochastic MPC, and evaluated decisions through explicit inventory and fleet accounting. The results showed why lower prediction error or an optimized surrogate objective is insufficient to establish better realized outcomes. Evidence-stratified testing also revealed a reversal in model ranking when fresh state information was unavailable. These questions connect naturally to graduate study in financial engineering, data science and operations research: statistical estimation, stochastic optimization, model risk and decisions under incomplete information. The application is urban mobility; the claimed evidence is predictive and simulated, not financial profit, pricing accuracy or market impact.
+The quantitative theme of my Citi Bike project was the interaction between uncertain forecasts, constrained resource allocation and delayed execution. I examined fixed point forecasts alongside scenario-based stochastic MPC, and evaluated decisions through explicit inventory and fleet accounting. The results showed why lower prediction error or an optimized surrogate objective is insufficient to establish better realized outcomes. Evidence-stratified testing also revealed a reversal in model ranking when fresh state information was unavailable. These questions connect naturally to graduate study in financial engineering, data science and operations research: statistical estimation, stochastic optimization, model risk and decisions under incomplete information. The application is urban mobility; the claimed evidence is predictive and simulated, not financial profit, pricing accuracy or market impact.
 
-The scenarios use four correlated residual blocks and expected penalties. They do not estimate a full probability law or implement a risk measure such as CVaR. “Cost” in the experiments is an artificial weighted proxy, not measured dollars. Personal contribution and AI assistance should match CONTRIBUTIONS.md.
+The scenarios use four correlated residual blocks and expected penalties. They do not estimate a full probability law or implement a risk measure such as CVaR. “Cost” in the experiments is an artificial weighted proxy, not measured dollars. Personal role and implementation assistance are documented in the [contribution record](../CONTRIBUTIONS.md).
 ''')
 (app/'CV_ZH.md').write_text(f'''# 中文项目经历草稿
 
-**纽约 Citi Bike 需求预测与调运优化｜计算研究项目（AI辅助实现）**
+**纽约 Citi Bike 需求预测与调运优化｜计算研究项目**
 
 - 清洗处理约4,559万条有效骑行，构建30站、262,800行小时面板；采用时间顺序训练/验证/测试，比较四种借还车预测模型。
 - 2025年全测试集借车MAE由上一小时基线{last:.3f}降至{dep:.3f}（降低{gain:.1f}%）；结合291万条历史状态变化记录开展证据分层，发现10,819条缺少新鲜初态支持的测试样本中模型排序反转。
 - 下载新数据前在Git冻结模型哈希与方案；2026年1月22,320个站点小时上不重新训练，借车MAE为{edep:.3f}，对照上一小时基线{elast:.3f}，降低{egain:.1f}%。
 - 建立整数规划、随机多期优化及考虑道路行驶/装卸/货车容量的配对事件仿真，独立核对181条路线与车队守恒；{tests}项测试及GitHub CI通过，保留不利结果和未观测状态。
 
-以上是可由成果核验的项目内容。个人动词、日期和角色应匹配实际参与；未提供的学校、导师、论文或奖项不补写。个人贡献见CONTRIBUTIONS.md。
+角色、日期和经历动词按实际参与填写。[贡献与工具使用](../CONTRIBUTIONS.md)记录项目职责和实现方式。
 ''')
 (app/'SOP_PARAGRAPH_EN.md').write_text(f'''# Statement-of-purpose project paragraph — editable draft
 
-This paragraph describes verified project work. Use it after reviewing the methods and adjusting personal-contribution verbs to your actual role; it does not establish your motivation or learning history.
+Editable statement-of-purpose paragraph. Adapt the personal role and research interests to actual experience; see the [contribution and tool-use record](../CONTRIBUTIONS.md).
 
-In an AI-assisted computational project on NYC Citi Bike, I investigated how demand forecasts translate into rebalancing decisions under imperfect operational evidence. The pipeline processed 45.6 million retained rides and compared four next-hour count predictors using chronological validation. XGBoost reduced pooled departure MAE from {last:.3f} to {dep:.3f}, but an evidence-stratified audit revealed a more instructive limitation: the last-hour baseline performed better on 10,819 test station-hours lacking fresh start-state support. A separately frozen January 2026 evaluation then tested unchanged models on 22,320 new station-hours, achieving departure MAE {edep:.3f} against {elast:.3f} for last-hour. The project also connected integer and stochastic optimization with paired-ride simulation and delayed truck routing. In the road-constrained scenario, optimized rebalancing did not outperform no intervention. These results exposed the distinction between predictive accuracy, a mathematical proxy objective and realized service under modeling assumptions. The resulting code, source manifests, negative results and {tests} tests form a reproducible basis for further study of uncertainty-aware urban operations. A natural next step is prospective inventory validation and policy evaluation on a genuinely untouched period, rather than treating unobserved historical states as known.
+In a computational project on NYC Citi Bike, I investigated how demand forecasts translate into rebalancing decisions under imperfect operational evidence. The pipeline processed 45.6 million retained rides and compared four next-hour count predictors using chronological validation. XGBoost reduced pooled departure MAE from {last:.3f} to {dep:.3f}, but an evidence-stratified audit revealed a more instructive limitation: the last-hour baseline performed better on 10,819 test station-hours lacking fresh start-state support. A separately frozen January 2026 evaluation then tested unchanged models on 22,320 new station-hours, achieving departure MAE {edep:.3f} against {elast:.3f} for last-hour. The project also connected integer and stochastic optimization with paired-ride simulation and delayed truck routing. In the road-constrained scenario, optimized rebalancing did not outperform no intervention. These results exposed the distinction between predictive accuracy, a mathematical proxy objective and realized service under modeling assumptions. The resulting code, source manifests, negative results and {tests} tests form a reproducible basis for further study of uncertainty-aware urban operations. A natural next step is prospective inventory validation and policy evaluation on a genuinely untouched period, rather than treating unobserved historical states as known.
 ''')
-(app/'CONTRIBUTIONS.md').write_text('''# Project provenance and personal contribution
+(app/'CONTRIBUTIONS.md').write_text('''# Contribution record
 
-The project artifacts, computations and results exist and are linked to evidence. The conversation records the user supplying the project guide, choosing scope and requesting implementation/validation. An AI coding assistant wrote substantial code and documentation and executed the experiments. No supervisor, institutional affiliation, publication, award, multi-week work history or entirely manual implementation is established by those records.
-
-Present this as an AI-assisted computational research project, and describe only your actual role. Before claiming experimental design, implementation or interpretation as personal contributions, review the corresponding code, reproduce the relevant results and be able to explain the decisions and limitations. CV entries supplied here are editable drafts, not certification of sole authorship. Follow the target institution's rules where it asks about assistance.
-
-Concrete review targets: src/prepare.py (cleaning/selection), src/features.py and src/train.py (temporal models), src/optimize.py (integer constraints), src/event_replay.py (paired returns), src/transport_sim.py (delayed cargo), src/coverage_audit.py (evidence strata), tests/ (invariants), and reports/optimization_formulation.md. Check actual filenames before use; README and scripts provide entry points.
+The maintained [contribution and tool-use record](../CONTRIBUTIONS.md) is at the repository root. It documents implementation assistance and the boundary between project artifacts and personal roles.
 ''')
 (app/'INTERVIEW_GUIDE_ZH.md').write_text(f'''# 项目面试准备
 
@@ -148,7 +144,7 @@ Concrete review targets: src/prepare.py (cleaning/selection), src/features.py an
 9. **如何保证车队守恒？** 站内+客户在途+客户暂存+卡车携货=初始车队+边界流入−边界流出。拒借取消对应还车；满桩货物留在卡车。
 10. **统计区间有什么限制？** 日块配对bootstrap只描述情景及采样天条件下不确定性；新增分层在已看过测试后完成，2025分层是事后分析；2026年1月则在下载前冻结方案与模型后另作评估，两者分开报告。
 11. **采集验证到什么程度？** 能证明实际时间戳、获取内容、归档及恢复；看monitoring_audit.json的schedule字段和间隔。不能从cron配置宣称长期连续运行。
-12. **本人做了什么？** 依据真实参与回答，并说明AI辅助。不要背诵“全部独立手写”。从数据清洗、一个时间泄漏测试、一个MILP约束和一个负结果入手，亲自复跑并解释。
+12. **本人做了什么？** 对照[贡献与工具使用](../CONTRIBUTIONS.md)准确界定个人角色。准备解释数据清洗、一个时间泄漏测试、一个MILP约束和一个负结果，并复现对应结果。
 
 演示顺序：RESEARCH_BRIEF.pdf → pooled/分层误差 → 一个三站MILP例子 → 路线/库存账 → pytest/远程CI。源码和结果定位见CLAIMS_AND_EVIDENCE.csv。
 ''')
@@ -163,11 +159,11 @@ Concrete review targets: src/prepare.py (cleaning/selection), src/features.py an
 - SOP_PARAGRAPH_EN.md：可调整的申请文书研究段落。
 - INTERVIEW_GUIDE_ZH.md：关键方法、负结果及答辩准备。
 - CLAIMS_AND_EVIDENCE.csv：申请中每项数字的来源和限定范围。
-- CONTRIBUTIONS.md：AI辅助实现与个人贡献边界。
+- [贡献与工具使用](../CONTRIBUTIONS.md)：项目职责、实现方式与展示说明。
 
 2026跨年评估可单独复现：安装requirements-lock.txt后运行 scripts/external_202601.py；它使用仓库 models/frozen_2025 中的小型冻结模型/过去上下文，只需下载约353.83MB的新月份原始档案。其他全年分析需完整项目数据。
 
-正式研究报告见 ../reports/technical_report.pdf，完整方法和运行记录见仓库README。没有代填学校/导师/日期，没有虚构论文发表或真实运营影响。申请者应理解并能复现自己声称参与的部分；AI助手完成的代码不能自动变成“本人完全独立手写”。
+正式研究报告见 ../reports/technical_report.pdf，完整方法和运行记录见仓库README。使用材料时，角色、日期和经历表述应与实际参与一致；贡献与实现方式统一记录在 ../CONTRIBUTIONS.md。
 ''')
 import base64
 body='<h1>Evidence-Aware Citi Bike Forecasting and Rebalancing</h1>'+data.to_html()+'<img src="data:image/png;base64,'+base64.b64encode((fig/'coverage_and_ranking.png').read_bytes()).decode()+'"><pre>'+html.escape(brief)+'</pre>'
@@ -189,7 +185,7 @@ def p(text,style='AppBody'):story.append(Paragraph(escape(text),styles[style]))
 def tab(frame):
     rows=[list(frame.columns)]+frame.astype(str).values.tolist();items=[[Paragraph(escape(str(v)),styles['AppSmall']) for v in row] for row in rows]
     table=Table(items,colWidths=[505/len(frame.columns)]*len(frame.columns),repeatRows=1);table.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e2edf4')),('GRID',(0,0),(-1,-1),.25,colors.lightgrey),('VALIGN',(0,0),(-1,-1),'TOP'),('BOTTOMPADDING',(0,0),(-1,-1),5)]));story.extend([table,Spacer(1,9)])
-p('Evidence-Aware Citi Bike Forecasting and Rebalancing','AppHead');p('Computational research project | 2025 NYC data | Reproducible, AI-assisted implementation','AppSmall')
+p('Evidence-Aware Citi Bike Forecasting and Rebalancing','AppHead');p('Computational research project | 2025 NYC data | Reproducible analysis','AppSmall')
 p('Question: can next-hour recorded-ride forecasts improve simulated rebalancing service when historical station-state evidence is incomplete and truck movements take time?')
 p('Data/method: 45.6M retained rides; 30 training-selected sites and 262,800 station-hours. Train Jan–Aug, validate Sep–Oct, test Nov–Dec; 43,950 test rows. Four fixed count models use past-only features. Metrics measure completed records, not all latent requests.')
 tab(data.reset_index().rename(columns={'model':'Model','departures':'Departure MAE','arrivals':'Arrival MAE'}))
@@ -206,7 +202,7 @@ p(f'Unresolved evidence: 19,632 station-hours ({100*protocol["remaining_fraction
 p('Inference limits: the 2025 age audit is post-hoc; the separate January 2026 evaluation freezes protocol before data acquisition. Both use archived-count rolling one-step inputs, not a deployed online forecast. Comparisons are fair within the same rows/scenario. Different strata, dates or capacities are not interchangeable treatment groups. Daily bootstrap intervals are conditional, not causal guarantees.')
 p(f'Engineering: {tests} local tests pass; public Research checks CI succeeded. Prospective GBFS collection stores unchanged counts, flag-only changes and failure heartbeats, with verified archives/restoration. Scheduling and cadence are audited from actual receipts; no long-term uptime claim is made.')
 p('Reproduce: install exact requirements-lock.txt; run python -m pytest. Full research commands and data manifests are in README. scripts/missingness_experiment.py regenerates this audit; scripts/check_transport.py validates saved road results. The portable delivery contains the road window inputs and supports --reuse-rides.')
-p('Repository: https://github.com/ryanwulikenature-glitch/ryan-wu','AppSmall');p('Sources: Citi Bike System Data; CityBikes historical archives (ODbL); official GBFS captures via Internet Archive; OpenStreetMap/OSRM driving proxy. Full attribution and empirical claim sources accompany the repository.','AppSmall');p('Implementation/experimental execution were AI-assisted. This is a computational project, not a peer-reviewed publication or live Citi Bike dispatch deployment. Personal contribution should be stated accurately.','AppSmall')
+p('Repository: https://github.com/ryanwulikenature-glitch/ryan-wu','AppSmall');p('Sources: Citi Bike System Data; CityBikes historical archives (ODbL); official GBFS captures via Internet Archive; OpenStreetMap/OSRM driving proxy. Full attribution and empirical claim sources accompany the repository.','AppSmall');story.append(Paragraph('<link href="https://github.com/ryanwulikenature-glitch/ryan-wu/blob/main/CONTRIBUTIONS.md">Contributions and tool use</link> | Computational research project; empirical scope and scenario assumptions are described above.',styles['AppSmall']))
 def footer(canvas,doc):canvas.setFont('AppSans',7);canvas.drawString(45,24,'Citi Bike research brief | complete methods and evidence in the linked repository');canvas.drawRightString(A4[0]-45,24,str(doc.page))
 SimpleDocTemplate(str(app/'RESEARCH_BRIEF.pdf'),pagesize=A4,leftMargin=45,rightMargin=45,topMargin=38,bottomMargin=40,title='Evidence-Aware Citi Bike Forecasting and Rebalancing',author='Computational research project').build(story,onFirstPage=footer,onLaterPages=footer)
 save_json(app/'portfolio_evidence.json',dict(tests=tests,remote_ci=ci,departure_mae=dep,last_hour_mae=last,pooled_relative_reduction_percent=gain,external_202601_departure_mae=edep,external_202601_last_hour_mae=elast,external_202601_relative_reduction_percent=egain,external_202601_rows=22320,unsupported_start_mae_xgboost=float(u.loc['xgboost','mae']),unsupported_start_mae_last_hour=float(u.loc['last_hour','mae']),unsupported_test_rows=int(u.loc['xgboost','n']),remaining_unknown_station_hours=19632,schedule_trigger_verified=monitor['schedule_trigger_verified'],provenance='AI-assisted implementation and experimental execution; personal role not independently certified'))
