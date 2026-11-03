@@ -1,6 +1,6 @@
 # Prospective official GBFS collector
 
-The deployed workflow is `.github/workflows/collect-gbfs.yml`, with target cron `*/5 * * * *`, `workflow_dispatch`, and source-change triggers. Its real output lives on the independent `gbfs-history` branch. Source changes do not erase that branch. Read `STATUS.json`, actual archived timestamps and Actions results to assess freshness; a cron definition alone does not prove regular execution. GitHub may delay or disable schedules. The source repository is public; automatic jobs skip private repositories to avoid implicitly consuming paid private compute.
+The deployed workflow is `.github/workflows/collect-gbfs.yml`, with target cron `2-59/5 * * * *` (UTC, offset from busy minute boundaries), `workflow_dispatch`, and source-change triggers. Its real output lives on the independent `gbfs-history` branch. Source changes do not erase that branch. Read `STATUS.json`, actual archived timestamps and Actions results to assess freshness; a cron definition alone does not prove regular execution. GitHub may delay or disable schedules. The source repository is public; automatic jobs skip private repositories to avoid implicitly consuming paid private compute.
 
 The managed-cloud process separately targets 60 seconds while the machine is running:
 
