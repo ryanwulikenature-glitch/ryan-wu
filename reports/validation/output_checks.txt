@@ -1,0 +1,2 @@
+PASS: 43950 test station-hours; 3 x 336 simulated hours; 21 x 3 sensitivity runs; accounting, alignment, generated report inputs and repeatability fingerprint verified.
+Synthetic outputs only; official dataset not validated.

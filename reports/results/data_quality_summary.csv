@@ -1,0 +1,2 @@
+data_kind,months,complete_year,raw_rows,retained_rides,stations,panel_rows,unknown_hours,count_conservation,dst_policy,zero_policy
+official,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]",True,45771102,45588101,30,262800,19634,passed,exclude unresolvable local folds/gaps; retain UTC hours,unobserved hours missing unless operating calendar confirms activity

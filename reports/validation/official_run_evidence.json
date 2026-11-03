@@ -1,0 +1,17 @@
+{
+  "raw_months": 12,
+  "raw_rows": 45771102,
+  "retained_rides": 45588101,
+  "stations": 30,
+  "panel_rows": 262800,
+  "unknown_operating_hours": 19634,
+  "test_station_hours": 43950,
+  "test_hours": 1465,
+  "policies": 3,
+  "sensitivity_scenarios": 21,
+  "sensitivity_hours": 48,
+  "count_scenario_station_balance": "passed",
+  "paired_event_fleet_conservation": "passed",
+  "observation_mode": "recorded event counts; unknown station operation not reclassified as active",
+  "solver_fallback_hours": 0
+}

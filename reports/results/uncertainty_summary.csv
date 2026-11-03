@@ -1,0 +1,4 @@
+strategy,baseline,metric,days,ci_low,ci_high,method
+greedy,none,daily_scenario_objective_difference,61,-459.5226613669691,-344.38438858782365,paired local-day block bootstrap; scenario uncertainty only
+milp,none,daily_scenario_objective_difference,61,-1029.9151367861732,-901.7282485924302,paired local-day block bootstrap; scenario uncertainty only
+milp,greedy,daily_scenario_objective_difference,61,-610.9227993815135,-521.4275417487625,paired local-day block bootstrap; scenario uncertainty only

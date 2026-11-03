@@ -1,0 +1,16 @@
+strategy,baseline,metric,absolute_difference,relative_change
+greedy,none,unmet_departures,-2518.0,-0.05991243932616351
+greedy,none,blocked_arrivals,-2522.0,-0.0651864871152007
+greedy,none,bike_km,8590.202819612634,
+greedy,none,scenario_objective,-24340.979718038754,-0.06031190385678049
+greedy,none,proxy_service_rate,0.005785539826709485,0.006403947150904722
+milp,none,unmet_departures,-6046.0,-0.14385647663462453
+milp,none,blocked_arrivals,-6050.0,-0.1563751970844426
+milp,none,bike_km,15846.87908321013,
+milp,none,scenario_objective,-58895.31209167896,-0.1459303792055675
+milp,none,proxy_service_rate,0.013891729067627367,0.015376594310710933
+milp,greedy,unmet_departures,-3528.0,-0.08929384965831436
+milp,greedy,blocked_arrivals,-3528.0,-0.09754748804158488
+milp,greedy,bike_km,7256.676263597496,0.8447619242504367
+milp,greedy,scenario_objective,-34554.33237364021,-0.09111371709420671
+milp,greedy,proxy_service_rate,0.008106189240917883,0.008915552433202861

@@ -1,0 +1,7 @@
+target,model,baseline,mean_daily_mae_difference,ci_low,ci_high,days,method
+departures,last_hour,seasonal_naive,-1.243045537340619,-1.8349218806921677,-0.6596734972677597,61,paired local-day block bootstrap
+departures,poisson,seasonal_naive,-0.7868377512145688,-1.2471273539909866,-0.34806922399352425,61,paired local-day block bootstrap
+departures,xgboost,seasonal_naive,-2.3011056039733884,-2.762792905273326,-1.8932833466307881,61,paired local-day block bootstrap
+arrivals,last_hour,seasonal_naive,-1.3125856102003641,-1.9094909380692167,-0.7430635473588343,61,paired local-day block bootstrap
+arrivals,poisson,seasonal_naive,-0.8829737761925837,-1.3645246213426987,-0.4453381668074532,61,paired local-day block bootstrap
+arrivals,xgboost,seasonal_naive,-2.323536614261839,-2.775641825361247,-1.9216266424498294,61,paired local-day block bootstrap

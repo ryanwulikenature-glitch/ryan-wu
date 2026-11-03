@@ -1,0 +1,26 @@
+{
+  "data_kind": "synthetic",
+  "software_tests": 30,
+  "notebook_cells_executed": 5,
+  "test_station_hours": 43950,
+  "simulation_hours_per_policy": 336,
+  "policies": 3,
+  "sensitivity_scenarios": 21,
+  "sensitivity_hours_per_policy": 48,
+  "paired_event_demo_rides": 300,
+  "paired_event_demo_hours_per_policy": 8,
+  "figures": 12,
+  "official_data_download": "blocked_proxy_policy_403",
+  "new_task_restoration": "not_verified",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.7.2",
+    "xgboost": "3.1.1",
+    "matplotlib": "3.10.7",
+    "pyarrow": "22.0.0"
+  },
+  "official_evidence": "official_run_evidence.json"
+}

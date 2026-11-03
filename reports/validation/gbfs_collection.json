@@ -1,0 +1,30 @@
+[
+  {
+    "collected_utc": "2026-11-03T05:34:05.048742+00:00",
+    "feed": "station_information",
+    "stations": 2518,
+    "status": "collected",
+    "scope": "current only, not 2025 inventory"
+  },
+  {
+    "collected_utc": "2026-11-03T05:34:05.048742+00:00",
+    "feed": "station_status",
+    "stations": 2518,
+    "status": "collected",
+    "scope": "current only, not 2025 inventory"
+  },
+  {
+    "collected_utc": "2026-11-03T05:34:07.755608+00:00",
+    "feed": "station_information",
+    "stations": 2518,
+    "status": "collected",
+    "scope": "current only, not 2025 inventory"
+  },
+  {
+    "collected_utc": "2026-11-03T05:34:07.755608+00:00",
+    "feed": "station_status",
+    "stations": 2518,
+    "status": "collected",
+    "scope": "current only, not 2025 inventory"
+  }
+]

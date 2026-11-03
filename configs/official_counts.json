@@ -1,0 +1,30 @@
+{
+  "year": 2025,
+  "n_stations": 30,
+  "timezone": "America/New_York",
+  "bbox": [
+    -74.025,
+    40.695,
+    -73.925,
+    40.885
+  ],
+  "max_duration_minutes": 180,
+  "min_active_months": 8,
+  "min_training_events": 500,
+  "max_coordinate_drift_km": 0.5,
+  "capacity": 25,
+  "budget": 12,
+  "radius_km": 3.0,
+  "initial_fraction": 0.5,
+  "lower_fraction": 0.3,
+  "upper_fraction": 0.7,
+  "shortage_weight": 5.0,
+  "overflow_weight": 5.0,
+  "distance_weight": 0.1,
+  "seed": 2025,
+  "hours": 336,
+  "solver_seconds": 5.0,
+  "event_order": "random_interleaved",
+  "data_kind": "official",
+  "observation_mode": "recorded_event_counts"
+}

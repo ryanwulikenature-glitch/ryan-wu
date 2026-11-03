@@ -1,0 +1,7 @@
+{
+  "sha256": "7457edb4d17e65375dfacff23043edf3bbb898960bd1362fcec5a99662f3c9cb",
+  "excludes": [
+    "runtime_ms",
+    "solver_status"
+  ]
+}

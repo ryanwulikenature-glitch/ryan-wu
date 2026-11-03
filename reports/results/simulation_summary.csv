@@ -1,0 +1,4 @@
+strategy,departure_requests,arrival_events,unmet_departures,blocked_arrivals,bikes_moved,bike_km,scenario_objective,proxy_service_rate,mean_runtime_ms,fallback_hours,data_kind,simulation_kind,hours
+none,435223,431868,42028,38689,0,0.0,403585.0,0.9034334122966847,0.4123486614333675,0,official,hourly count-based scenario simulation,1465
+greedy,435223,431868,39510,36167,17259,8590.202819612634,379244.02028196125,0.9092189521233942,0.5063816839587714,0,official,hourly count-based scenario simulation,1465
+milp,435223,431868,35982,32639,16442,15846.87908321013,344689.68790832104,0.9173251413643121,7.881863659383919,0,official,hourly count-based scenario simulation,1465

@@ -1,0 +1,6 @@
+PASS: 300 synthetic paired rides, 3 policies x 8 hours, causal suppression and boundary fleet conservation.
+strategy,unmet_departures,blocked_arrivals,bikes_moved
+greedy,33,4,9
+milp,33,3,8
+none,38,5,0
+

@@ -1,0 +1,13 @@
+filename,month,url,bytes,sha256,csv_count,downloaded_utc
+202501-citibike-tripdata.zip,1,https://s3.amazonaws.com/tripdata/202501-citibike-tripdata.zip,414213312,ed3b0138903960afe50386ab44fec8bf52d69474b26f5c0af83e648094aea096,3,2026-11-03T04:58:39.566800+00:00
+202502-citibike-tripdata.zip,2,https://s3.amazonaws.com/tripdata/202502-citibike-tripdata.zip,396008433,e4860762fb07561bbda251a20223d996e39c6c2c8bc2592896507bfbaa40ce78,3,2026-11-03T04:58:40.215670+00:00
+202503-citibike-tripdata.zip,3,https://s3.amazonaws.com/tripdata/202503-citibike-tripdata.zip,618260276,f5cc8c5a4ed99e719a4a9d72014b3b206ab03c2b23ce05a2af4be6564444833f,4,2026-11-03T04:58:41.211105+00:00
+202504-citibike-tripdata.zip,4,https://s3.amazonaws.com/tripdata/202504-citibike-tripdata.zip,727249076,5bda09477bb675e5a481a6f68acd367c2cae48e745a97011ca8a22c0073cece4,4,2026-11-03T04:58:54.324203+00:00
+202505-citibike-tripdata.zip,5,https://s3.amazonaws.com/tripdata/202505-citibike-tripdata.zip,844446636,0f5edc46361c4581c614a19cb697271b6f04143f6648b56da8fc18f7310ab103,5,2026-11-03T04:59:10.236494+00:00
+202506-citibike-tripdata.zip,6,https://s3.amazonaws.com/tripdata/202506-citibike-tripdata.zip,929043436,fdc15ebc98ddef6ffa6825a71616e2f704def8376590881f91b0109cd2d81f9b,5,2026-11-03T04:59:27.434303+00:00
+202507-citibike-tripdata.zip,7,https://s3.amazonaws.com/tripdata/202507-citibike-tripdata.zip,973875638,5c336f33986e229203308f1e177f42d46bce3c6a3a85aac7d412cd7109b3253b,5,2026-11-03T04:59:45.090251+00:00
+202508-citibike-tripdata.zip,8,https://s3.amazonaws.com/tripdata/202508-citibike-tripdata.zip,1000258641,c15c6f1a3c3084fa03c012a20f88474907cca74119c31e58eb877b753dbc19b1,6,2026-11-03T05:00:04.155574+00:00
+202509-citibike-tripdata.zip,9,https://s3.amazonaws.com/tripdata/202509-citibike-tripdata.zip,1032411368,b1721f1f9306daf2ca5aa358efe64c70da7c58cda82ae595692bb2d7cf2d5e46,6,2026-11-03T05:00:23.133609+00:00
+202510-citibike-tripdata.zip,10,https://s3.amazonaws.com/tripdata/202510-citibike-tripdata.zip,924115389,6a8ea3a973ed92caa6129795ff5e0cc758aa9d42c81af579b8f1ebf9f555a6be,5,2026-11-03T05:00:40.877643+00:00
+202511-citibike-tripdata.zip,11,https://s3.amazonaws.com/tripdata/202511-citibike-tripdata.zip,667113932,279fc68f6ebc06dec938c7574f843707b2e86c590b3126050672938ad0a8345f,4,2026-11-03T05:00:53.898290+00:00
+202512-citibike-tripdata.zip,12,https://s3.amazonaws.com/tripdata/202512-citibike-tripdata.zip,407790791,504448a1cd0b8a4630da880a861bc73bbd4d88fad59a66f18ec23a84e5747f45,3,2026-11-03T05:01:01.879379+00:00

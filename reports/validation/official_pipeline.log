@@ -1,0 +1,11 @@
+/workspace/ryan-wu/outputs/official/final_report.md
+Replaying 800,854 cleaned recorded rides; 1465 test hours
+strategy,unmet_departures,blocked_arrivals,served_departures,bikes_moved,bike_km,departure_requests,proxy_service_rate,simulation_kind,hours
+greedy,40827,31632,394396,17181,8580.944420290232,435223,0.906192917194174,paired recorded-ride counterfactual scenario,1465
+milp,37832,29174,397391,16267,15525.929139137104,435223,0.9130744468927423,paired recorded-ride counterfactual scenario,1465
+none,42891,33379,392332,0,0.0,435223,0.9014505207675145,paired recorded-ride counterfactual scenario,1465
+
+PASS: full fleet conservation at every paired event, all policies.
+PASS: 12 official months, 30 stations, 43,950 test station-hours; full 1,465-hour count and paired-event scenarios, 21 sensitivity scenarios, inventory bounds, accounting, shared sample paths and saved-summary reconciliation.
+PASS: Chinese report, standalone HTML, model-error block intervals and official monthly audit generated from saved real outputs.
+PASS: executed 5 EDA notebook cells with current venv kernel.
