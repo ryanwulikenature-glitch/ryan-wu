@@ -1,0 +1,36 @@
+{
+  "name": "Frozen external January 2026 evaluation",
+  "frozen_utc": "2026-11-03T08:43:57.183497+00:00",
+  "url": "https://s3.amazonaws.com/tripdata/202601-citibike-tripdata.zip",
+  "period_start": "2026-01-01T05:00:00+00:00",
+  "period_stop": "2026-02-01T05:00:00+00:00",
+  "selection": "All original 30 training-selected stations; all 744 hours; no reselection by new activity or outcome",
+  "model_sha256": {
+    "outputs/official/departures_poisson.joblib": "c4e81083721ce316f0239b4eaf3bd3eb335e9bdfa5c95457ff8500acfa6d8472",
+    "outputs/official/departures_xgboost.joblib": "c1aebb64544e2caca900f2140f41a7016d2d071c70e821d7891205a186834ab8",
+    "outputs/official/arrivals_poisson.joblib": "5d6f7e88907dd541e5837ad2796c0047ebf982a06f34ac6bb6f09ef4be7ff290",
+    "outputs/official/arrivals_xgboost.joblib": "d8663318059220b7ea94c6b3b767dc2c297d972267c235cf8d507c886905aa90"
+  },
+  "station_file_sha256": "b3062a8a52345ce9bc128961a37db8081f075c94c451b7c8b0373ac493dec2f0",
+  "features_source_sha256": "c87336fb3c023ea5f2d5b0a33c5590d1c70320b3bc4ac9dfffdec0a3c6e5fa94",
+  "cleaning_source_sha256": "95cae77c5c8662c8c32b33df862e63691e95688d303e380e978c8146e73249a6",
+  "cutoff_minutes": 180,
+  "timezone": "America/New_York",
+  "training": "Existing fitted pipelines trained/refitted on Jan-Oct 2025; no fit, tuning, recalibration or model selection on new data",
+  "initial_history": "Final 168 hours of original recorded-count panel; January rolling one-step features use only preceding known completed-ride counts",
+  "boundary": "Include deduplicated December-origin cleaned trips arriving after January start; clean January selected-endpoint records with original rules; count endpoints independently in local-January window",
+  "metrics": [
+    "MAE",
+    "RMSE",
+    "WAPE"
+  ],
+  "comparators": [
+    "last_hour",
+    "seasonal_naive",
+    "poisson",
+    "xgboost"
+  ],
+  "uncertainty": "Paired local-day differences of MAE, 1000 bootstrap resamples seed2025; full-period and fixed weekday/weekend/peak strata",
+  "retention": "Retain all model outcomes, including unfavorable cross-year shifts; do not replace old baseline or retune",
+  "scope": "First evaluation of this new archived month in this project; public protocol frozen in Git before downloading target records, not a claim of formal trial preregistration or prospective online deployment"
+}
