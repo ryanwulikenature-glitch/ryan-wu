@@ -30,6 +30,6 @@
   "stochastic_hours": 48,
   "network_sites": 60,
   "network_hours": 336,
-  "pytest_passed": 54
+  "pytest_passed": 60
 }
 PASS: historical evidence, confidence levels, corroboration, enriched panel and all extension results documented without filling unsupported states.

@@ -1,6 +1,12 @@
+[Research project overview](PROJECT_OVERVIEW.md) · [Two-page research brief](application/RESEARCH_BRIEF.pdf) · [申请经历与金融工程/DS/OR材料](application/README.md)
+
+[![Research checks](https://github.com/ryanwulikenature-glitch/ryan-wu/actions/workflows/research-checks.yml/badge.svg)](https://github.com/ryanwulikenature-glitch/ryan-wu/actions/workflows/research-checks.yml)
+
+新增：冻结模型后的2026年1月外部评估（22,320站点小时；借车MAE 2.705 vs last-hour 3.235），以及5/15/30/60分钟历史初态证据分层。指标来源、范围、负结果与AI辅助贡献见申请材料。
+
 # Historical-evidence extension: current version
 
-The original baseline below remains reproducible. The [final engineering supplement](reports/operations_completion.md) reports the executed road/service integration and deployed prospective collection; its [offline HTML](reports/operations_completion.html) includes plots. New evidence and experiments are in [the supplement](reports/historical_evidence_and_extensions.md) and [the ten-page report](reports/technical_report.pdf). Fifty-four tests pass.
+The original baseline below remains reproducible. The [final engineering supplement](reports/operations_completion.md) reports the executed road/service integration and deployed prospective collection; its [offline HTML](reports/operations_completion.html) includes plots. New evidence and experiments are in [the supplement](reports/historical_evidence_and_extensions.md) and [the ten-page report](reports/technical_report.pdf). Sixty tests pass.
 
 We acquired 12 months of CityBikes NYC changes: 2,907,502 records for all 30 selected sites, plus 120 dated official capacity and 180 dated official status points from four/six archived feeds. Internally inconsistent capacities/counts are rejected. Exact UID/short_name identities, freshness and past-only joins are tested. Capacity corroboration matches 102/102 comparable preceding official points; unmatched points are retained. Historical common-state comparisons use 260 eligible hours and reset to measured stocks each hour.
 
@@ -24,7 +30,7 @@ Official 2025 NYC completed-ride archives, 30 training-selected stations, four c
 
 ## Executed evidence
 
-45,771,102 raw rows; 45,588,101 retained rides; 262,800 station-hours. Train January-August, validate September-October, test November-December. The 43,950 test rows span 1,465 hours. Three policies run over the full test horizon in both the hourly count and paired-ride scenarios. Twenty-one sensitivity/ablation configurations each run three policies for 48 hours. Fifty-four tests pass; two EDA notebooks are executed. All figures, model errors and uncertainty tables are generated from saved data.
+45,771,102 raw rows; 45,588,101 retained rides; 262,800 station-hours. Train January-August, validate September-October, test November-December. The 43,950 test rows span 1,465 hours. Three policies run over the full test horizon in both the hourly count and paired-ride scenarios. Twenty-one sensitivity/ablation configurations each run three policies for 48 hours. Sixty tests pass; two EDA notebooks are executed. All figures, model errors and uncertainty tables are generated from saved data.
 
 XGBoost test MAE is approximately 3.418 departures and 3.398 arrivals per station-hour. Under the count-scenario assumptions, the service proxy is 90.343% with no rebalancing, 90.922% with Greedy, and 91.733% with MILP. MILP uses more bike-km than Greedy; these are not real service rates or financial effects. The report retains weaker model results and the transport/service tradeoff.
 
@@ -45,7 +51,7 @@ OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 .venv/bin/python -m src.prepare --confi
 
 `official_pipeline.sh` reuses matching prepared caches. If caches are absent, download and prepare first. Full-year cleaning can take many minutes; source archives total 8.93 GB and large intermediate partitions also require disk. Notebook execution starts a temporary local kernel. No persistent server or external database is needed.
 
-Raw archives, venv, large processed outputs, models and live snapshots are not committed. URLs/hashes are in reports/results/download_manifest.csv. Code regenerates them; small research evidence is committed. The downloadable project archive additionally contains processed panels/models/results, not the original 8.93 GB raw data.
+Raw archives, venv, large processed outputs and routine model/live outputs are not committed. Four small hash-frozen fitted pipelines and 168-hour past-count context are now committed under models/frozen_2025 for standalone January2026 external replication. URLs/hashes are in reports/results/download_manifest.csv. Code regenerates them; small research evidence is committed. The downloadable project archive additionally contains processed panels/models/results, not the original 8.93 GB raw data.
 
 ## Observation and simulation assumptions
 
@@ -64,3 +70,7 @@ The count simulator uses shared seeded exogenous arrivals. The separate paired-e
 Two live samples have been collected for both current feeds, 2,518 stations per feed/sample. JSON, SQLite inventory rows and failure logs are retained separately under data/gbfs. A new local 60-second-target daemon and public five-minute-target GitHub Actions workflow are deployed; real archived output has been restored to SQLite. Actual dated evidence and gaps are reported in the final engineering supplement; scheduled continuity is not guaranteed. Current station IDs/capacities must not be treated as verified 2025 identifiers or history. Newly executed work includes archived 24-hour-lead weather ablation, raw duration-cutoff sensitivity, stochastic three-period MPC, restricted atomic pickup-delivery routing audits, polygon checks and a 60-site stress test. A new directed-OSRM co-loaded pickup/delivery heuristic is integrated with 48-hour paired-event service, with 181 routes independently checked. Road MILP performs worse than no intervention in this scenario; that negative result is retained. The driving network is a current proxy, not verified 2025 traffic or truck-specific restrictions. Real operator dispatch and long-term collection continuity are not claimed.
 
 Published repository: https://github.com/ryanwulikenature-glitch/ryan-wu (main). Source, reports and small evidence tables are pushed; raw data/models are regenerated or included in the separate project ZIP.
+
+## Frozen external replication
+
+After installing requirements-lock.txt, run `python scripts/external_202601.py`. The repository contains exact pre-download hash-frozen models, station list and preceding168-hour recorded-count context; only the353.83MB January2026 archive is downloaded. No refitting occurs. The plan was committed before target acquisition at4dd3f516. Results/31-day paired intervals are in reports/results/external_202601. This does not backfill missing operating states or validate online lag availability.

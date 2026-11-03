@@ -1,0 +1,8 @@
+{
+  "url": "https://s3.amazonaws.com/tripdata/202601-citibike-tripdata.zip",
+  "retrieved_utc": "2026-11-03T08:45:13.592528+00:00",
+  "bytes": 353829139,
+  "sha256": "8d579be9515f797739f0ff907576da44f25413bc677e1286a876696a71ae9755",
+  "last_modified": "Wed, 04 Feb 2026 14:46:32 GMT",
+  "protocol_freeze_commit": "4dd3f516474d3f034bce123c7f211f91a8e0680a"
+}

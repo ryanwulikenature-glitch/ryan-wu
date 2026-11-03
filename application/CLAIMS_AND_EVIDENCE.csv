@@ -1,0 +1,10 @@
+id,claim,scope,evidence
+data_scale,"45,588,101 retained NYC rides; 30 training-selected sites; 262,800 station-hours",Global cleaning scale; modeling targets are selected-network recorded counts,reports/validation/official_run_evidence.json
+pooled_forecast,Pooled test departure MAE 3.417684 vs last-hour 4.475768; reduction 23.6403%,"43,950 chronological test station-hours; recorded completed rides, not latent requests",reports/results/forecast_metrics.csv
+conditional_reversal,"Unsupported-start departure MAE: XGBoost 1.621496 vs last-hour 1.479896, n=10819","Post-hoc 15-minute evidence criterion; different stratum composition, not a causal missingness effect",reports/results/application/coverage_forecast_metrics.csv
+historical_evidence,"2,907,502 historical status changes; 120 official capacity and 180 official status points",Change events are not continuous operating history,reports/results/extensions/completion_evidence.json
+remaining_gap,"19,632 unsupported historical station-hours (7.4703% of panel)",12 five-minute-bin sampling criterion; remaining unknowns preserved,reports/results/application/coverage_protocol.json
+transport,48-hour road scenario: no intervention 94.7764% vs road MILP 94.4978%,"Recorded-ride counterfactual; current driving proxy, frozen capacity and virtual depot; negative result retained",reports/results/operations/summary.csv
+testing,60 local tests passed; remote Research checks success,"Unit/synthetic research checks, not proof of real operational benefit",https://github.com/ryanwulikenature-glitch/ryan-wu/actions/runs/41604131111
+collection,Collection deployed; scheduled trigger success observed=False,Actual dated samples only; no claim of long-term cadence or backfilled 2025 state,reports/validation/monitoring_audit.json
+external_2026,Frozen January 2026 departure MAE 2.704974 vs last-hour 3.235394; reduction 16.3943%,"22,320 new station-hours; protocol/model hashes frozen in Git before acquiring records; no refit; rolling archived-count evaluation",reports/results/external_202601/validation.json

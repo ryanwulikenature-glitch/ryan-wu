@@ -1,5 +1,5 @@
 {
-  "pytest_passed": 54,
+  "pytest_passed": 60,
   "route_checks": {
     "routes": 181,
     "paired_rides": 47470,
@@ -15,27 +15,47 @@
     "all_negative_results_retained": true
   },
   "telemetry_snapshot": {
-    "snapshot_created_utc": "2026-11-03T08:19:51.978843+00:00",
-    "polls": 44,
-    "observations": 1320,
+    "snapshot_created_utc": "2026-11-03T08:51:18.423135+00:00",
+    "polls": 76,
+    "observations": 2280,
     "first_poll_utc": "2026-11-03T07:35:07.760597+00:00",
-    "last_poll_utc": "2026-11-03T08:19:16.996804+00:00",
-    "observed_span_minutes": 44.15393678333333,
+    "last_poll_utc": "2026-11-03T08:51:17.002297+00:00",
+    "observed_span_minutes": 76.15402833333333,
     "max_poll_gap_seconds": 138.251566,
     "poll_status_counts": {
-      "ok": 44
+      "ok": 76
     },
     "quality_counts": {
-      "stale_or_future_source_report": 44,
-      "station_absent_from_information": 88,
-      "valid": 1188
+      "stale_or_future_source_report": 76,
+      "station_absent_from_information": 152,
+      "valid": 2052
     },
-    "sqlite_sha256": "a19a2e2542cea1b073bfb577fbc344b6c9dfb8fc7613dae74a0167c11b712162",
+    "sqlite_sha256": "f824dabb2cb3d676700b3b265a4f1312934881cc9b86ef64a5347fa0db6b4411",
     "snapshot_integrity": "ok",
     "scope": "Actual dated prospective samples only; no inference of states between polls or 2025 backfill",
     "scheduling": "Local target 60s while VM alive; GitHub target 5min best effort, independent public gbfs-history branch; inspect actual run receipts"
   },
   "github_runs": [
+    {
+      "id": 41604130970,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-03T08:33:14Z",
+      "updated_at": "2026-11-03T08:33:26Z",
+      "html_url": "https://github.com/ryanwulikenature-glitch/ryan-wu/actions/runs/41604130970",
+      "head_sha": "8a83ba61a3b951530713938e1c81b551044094e7"
+    },
+    {
+      "id": 41603556749,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-03T08:28:38Z",
+      "updated_at": "2026-11-03T08:28:52Z",
+      "html_url": "https://github.com/ryanwulikenature-glitch/ryan-wu/actions/runs/41603556749",
+      "head_sha": "a2652ae551134d1546f2eea0580e9d03d6518598"
+    },
     {
       "id": 41601698448,
       "event": "push",
@@ -58,17 +78,17 @@
     }
   ],
   "github_archive_restoration": {
-    "verification_utc": "2026-11-03T08:18:48.036572+00:00",
-    "archive_branch_head": "92f57fe53ebe84ff54831a8e8fd40f78904a1946",
+    "verification_utc": "2026-11-03T08:34:45.654125+00:00",
+    "archive_branch_head": "daedac429eb806577f2c24b6d99d62dd0458ef33",
     "workflow_state": "active",
-    "polls": 2,
-    "observations": 60,
+    "polls": 4,
+    "observations": 120,
     "integrity_check": "ok",
-    "latest_poll_utc": "2026-11-03T08:13:48.336796+00:00",
+    "latest_poll_utc": "2026-11-03T08:33:20.637399+00:00",
     "downloaded_sha256": {
       "README.md": "fb0d314ce36f1f2ea1b223e235e5f5c5b2e885f132b99ddd8507450497a64a68",
-      "STATUS.json": "ed0c4a292531f91113f447980ad89f4b1eb0d576ef4b9f89a7a7f4eba3cda765",
-      "data/2026-11-03.jsonl.gz": "7b64fabc96bd4f0bbf08658ac4c35ee4897c7c079c9c7ff22ae700a62851d492"
+      "STATUS.json": "dd7658d4d7c5610bbd9ea381545e1ac1e6c2fa5477c591cc55080c71a5c10f3f",
+      "data/2026-11-03.jsonl.gz": "3f5c759abb4da05f2f7ad94ef2ff8ece8f3c6ca71d506db07bdad512b1dd78c2"
     },
     "scheduled_successes_observed": 0
   },

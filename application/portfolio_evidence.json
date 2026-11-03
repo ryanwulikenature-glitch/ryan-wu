@@ -1,0 +1,27 @@
+{
+  "tests": 60,
+  "remote_ci": {
+    "name": "Research checks",
+    "id": 41604131111,
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-03T08:33:14Z",
+    "updated_at": "2026-11-03T08:34:00Z",
+    "html_url": "https://github.com/ryanwulikenature-glitch/ryan-wu/actions/runs/41604131111",
+    "head_sha": "8a83ba61a3b951530713938e1c81b551044094e7"
+  },
+  "departure_mae": 3.417683828450714,
+  "last_hour_mae": 4.475767918088737,
+  "pooled_relative_reduction_percent": 23.640280483753294,
+  "external_202601_departure_mae": 2.7049741403630345,
+  "external_202601_last_hour_mae": 3.235394265232975,
+  "external_202601_relative_reduction_percent": 16.394296378952934,
+  "external_202601_rows": 22320,
+  "unsupported_start_mae_xgboost": 1.621496039432302,
+  "unsupported_start_mae_last_hour": 1.4798964784175987,
+  "unsupported_test_rows": 10819,
+  "remaining_unknown_station_hours": 19632,
+  "schedule_trigger_verified": false,
+  "provenance": "AI-assisted implementation and experimental execution; personal role not independently certified"
+}

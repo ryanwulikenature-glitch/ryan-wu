@@ -1,6 +1,12 @@
+[Research project overview](PROJECT_OVERVIEW.md) · [Two-page research brief](application/RESEARCH_BRIEF.pdf) · [申请经历与金融工程/DS/OR材料](application/README.md)
+
+[![Research checks](https://github.com/ryanwulikenature-glitch/ryan-wu/actions/workflows/research-checks.yml/badge.svg)](https://github.com/ryanwulikenature-glitch/ryan-wu/actions/workflows/research-checks.yml)
+
+新增：冻结模型后的2026年1月外部评估（22,320站点小时；借车MAE 2.705 vs last-hour 3.235），以及5/15/30/60分钟历史初态证据分层。指标来源、范围、负结果与AI辅助贡献见申请材料。
+
 # 当前交付状态（历史证据与扩展版）
 
-**54 项测试通过，所有下列代码和实验均已实际执行。** 原 2025 Trip Histories 全年基线保留；另已接入 CityBikes 12 个月、30 站 2,907,502 条历史状态变化样本，及 4 份信息/6 份状态官方存档。
+**60 项测试通过，所有下列代码和实验均已实际执行。** 原 2025 Trip Histories 全年基线保留；另已接入 CityBikes 12 个月、30 站 2,907,502 条历史状态变化样本，及 4 份信息/6 份状态官方存档。
 
 - [10 页英文报告](reports/technical_report.pdf)
 - [历史证据、来源和全部扩展结果](reports/historical_evidence_and_extensions.md) · [离线 HTML](reports/historical_evidence_and_extensions.html)
@@ -136,7 +142,7 @@ OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MPLCONFIGDIR=/tmp/citibike-mpl \
 
 预处理将所有小时事件分区落盘，只在内存合并选定的 30 个站点；训练期按 chunk/月压缩坐标中位数及 min/min、max/max 对角点，使用这些代理点检查漂移，避免全城 station-hour 数据一次性加载。该规则对零星坐标错误比较保守，也不等于经过验证的历史站点迁移记录。
 
-正式验证：54 项测试通过；官方 12 月份清单、45,588,101 条有效行程、30 个站、43,950 测试站点小时、三策略各 1,465 小时计数及配对回放、21 场景均经实际运行和独立核对。查看 reports/项目总结.md 或可离线打开的 reports/项目总结.html。运行报告中的服务指标均是假设情景代理。
+正式验证：60 项测试通过；官方 12 月份清单、45,588,101 条有效行程、30 个站、43,950 测试站点小时、三策略各 1,465 小时计数及配对回放、21 场景均经实际运行和独立核对。查看 reports/项目总结.md 或可离线打开的 reports/项目总结.html。运行报告中的服务指标均是假设情景代理。
 
 ## 新清单补充交付
 
@@ -147,3 +153,14 @@ OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MPLCONFIGDIR=/tmp/citibike-mpl \
 - 原受限原子取送与三期随机MPC保留；新增两辆容量6、道路行驶/装卸/司机工时/携货重送的共同装载取送启发式已联立服务仿真。当前OSM驾驶代理、虚拟车库与固定容量是场景假设，不是实际运营调度。
 
 GitHub 已发布：https://github.com/ryanwulikenature-glitch/ryan-wu （main）；英文报告和结果小表在仓库内可直接查看。
+
+## 冻结跨年验证与申请材料
+
+金融工程、数据科学及运筹优化方向材料见 [application/README.md](application/README.md)。2026年1月的方案和模型SHA在下载前以提交4dd3f516冻结，全部744小时/30站评估不重新训练。小型冻结模型与5040行此前168小时上下文已提交在 models/frozen_2025，克隆仓库后可单独运行：
+
+```bash
+./scripts/install.sh
+.venv/bin/python scripts/external_202601.py
+```
+
+仅这项外部评估下载353.83MB新月份数据；其余全年研究的数据依赖仍见前文。结果、独立重算及迁移复现收据见 reports/results/external_202601 和 reports/validation/external_portable.json。该研究不回填运营未知状态，不等同线上运营效果或金融收益。

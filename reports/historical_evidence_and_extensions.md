@@ -112,7 +112,7 @@ milp,254518,251288,22721,19559,4020,2098.2504909678573,211609.8250490968,0.91072
 Bike-share data by CityBikes contributors and available from https://data.citybik.es .
 CityBikes contributors. (2026) Bike-share data retrieved from https://data.citybik.es .
 
-CityBikes 衍生数据库按 ODbL-1.0 提供，原运营方数据条款仍适用；天气数据注明 Open-Meteo/NOAA 来源。下载清单、原始快照、SHA256、处理程序和所有结果均保留。已有 54 项测试通过，包括未来信息隔离、历史时间与新鲜度、异常容量拒绝、随机规划穷举检验、路径容量/工时/不可行状态等。
+CityBikes 衍生数据库按 ODbL-1.0 提供，原运营方数据条款仍适用；天气数据注明 Open-Meteo/NOAA 来源。下载清单、原始快照、SHA256、处理程序和所有结果均保留。已有 60 项测试通过，包括未来信息隔离、历史时间与新鲜度、异常容量拒绝、随机规划穷举检验、路径容量/工时/不可行状态等。
 
 ## 仍需外部原始记录的部分
 

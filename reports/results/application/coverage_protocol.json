@@ -1,0 +1,19 @@
+{
+  "analysis": "Exploratory post-hoc sensitivity audit, not a new untouched test",
+  "models": "Original four fixed fitted baseline predictors; no training/retuning or forecast replacement",
+  "thresholds_minutes": [
+    5,
+    15,
+    30,
+    60
+  ],
+  "supported": "Latest observation at/before decision; both archive timestamp and source report within threshold; original source freshness <=300s; valid counts; renting/returning enabled. Criterion is point evidence, not continuous operating truth.",
+  "unsupported": "Fails this evidence criterion; does not mean closed or zero latent demand",
+  "comparisons": "Every model uses identical rows within each stratum. Thresholds change composition; cross-stratum/cross-threshold errors do not identify model gains or missing-at-random selection.",
+  "bootstrap": "Paired local-day MAE differences, XGBoost minus named baseline, 1000 resamples seed2025; conditional on sampled days and assumptions",
+  "panel_station_hours": 262800,
+  "original_unknown": 19634,
+  "remaining_unsupported": 19632,
+  "remaining_fraction": 0.07470319634703196,
+  "operating_truth": "The remaining 19632 historical station-hours were not filled. Current prospective data never backfills 2025."
+}

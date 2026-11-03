@@ -1,0 +1,17 @@
+{
+  "sha256": {
+    "arrivals_poisson.joblib": "5d6f7e88907dd541e5837ad2796c0047ebf982a06f34ac6bb6f09ef4be7ff290",
+    "arrivals_xgboost.joblib": "d8663318059220b7ea94c6b3b767dc2c297d972267c235cf8d507c886905aa90",
+    "carryover.parquet": "6a67263f463e950040005c61d99520d238b851b6b316ebb95cb302333c320cbc",
+    "departures_poisson.joblib": "c4e81083721ce316f0239b4eaf3bd3eb335e9bdfa5c95457ff8500acfa6d8472",
+    "departures_xgboost.joblib": "c1aebb64544e2caca900f2140f41a7016d2d071c70e821d7891205a186834ab8",
+    "history_tail.parquet": "6a413ec60e7173a495add97164ab7840b0d6a7d81e55bf71437f75ef069cd7ca",
+    "stations.csv": "b3062a8a52345ce9bc128961a37db8081f075c94c451b7c8b0373ac493dec2f0",
+    "training_config.json": "d4dcc0b2f109f3a5efe40e383043e0543824f43d26423dc725af6f812a3d7a45"
+  },
+  "source_protocol": "configs/external_202601.json",
+  "models": "Exact copies of pre-download hash-frozen Jan-Oct2025 fitted pipelines, never refitted on2026",
+  "history": "Last168 observed-count hours of original2025 panel, all preceding2026 start; not a verified operating calendar",
+  "history_source_sha256": "0556cb98e54f77bd1b8ffce9e8b4c18258420d21fb201011b759d3f2b5477969",
+  "carryover_rows": 0
+}

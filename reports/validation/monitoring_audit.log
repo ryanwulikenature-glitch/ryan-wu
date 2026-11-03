@@ -1,0 +1,58 @@
+{
+  "local": {
+    "polls": 76,
+    "first_poll_utc": "2026-11-03T07:35:07.760597+00:00",
+    "last_poll_utc": "2026-11-03T08:51:17.002297+00:00",
+    "observed_span_hours": 1.2692338055555554,
+    "expected_seconds": 60,
+    "gap_threshold_seconds": 90.0,
+    "median_gap_seconds": 60.000144,
+    "max_gap_seconds": 138.251566,
+    "long_gaps": [
+      {
+        "start": "2026-11-03T07:40:07.761444+00:00",
+        "end": "2026-11-03T07:42:26.013010+00:00",
+        "seconds": 138.251566
+      }
+    ],
+    "failed_polls": 0,
+    "minimum_window_hours": 24,
+    "minimum_window_observed": false,
+    "all_observed_gaps_within_threshold": false,
+    "continuous_uptime_verified": false,
+    "interpretation": "Dated snapshots only. Gap compliance is a polling diagnostic, not proof of continuous station operation, latent demand or future service availability."
+  },
+  "github": {
+    "polls": 4,
+    "first_poll_utc": "2026-11-03T07:43:56.323446+00:00",
+    "last_poll_utc": "2026-11-03T08:33:20.637399+00:00",
+    "observed_span_hours": 0.8234205425,
+    "expected_seconds": 300,
+    "gap_threshold_seconds": 600,
+    "median_gap_seconds": 897.53296,
+    "max_gap_seconds": 1792.01335,
+    "long_gaps": [
+      {
+        "start": "2026-11-03T07:43:56.323446+00:00",
+        "end": "2026-11-03T08:13:48.336796+00:00",
+        "seconds": 1792.01335
+      },
+      {
+        "start": "2026-11-03T08:13:48.336796+00:00",
+        "end": "2026-11-03T08:28:45.869756+00:00",
+        "seconds": 897.53296
+      }
+    ],
+    "failed_polls": 0,
+    "minimum_window_hours": 24,
+    "minimum_window_observed": false,
+    "all_observed_gaps_within_threshold": false,
+    "continuous_uptime_verified": false,
+    "interpretation": "Dated snapshots only. Gap compliance is a polling diagnostic, not proof of continuous station operation, latent demand or future service availability."
+  },
+  "successful_schedule_runs": 0,
+  "successful_scheduled_polls_linked_to_run_ids": 0,
+  "schedule_trigger_verified": false,
+  "archive_and_schedule_link_verified": false,
+  "scope": "Observed windows only. Historic/current unmatched station IDs remain unknown; no historical backfill or long-term uptime claim."
+}

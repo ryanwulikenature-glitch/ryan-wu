@@ -1,0 +1,24 @@
+{
+  "coverage_past_only_and_partition_accounting": "passed",
+  "unknown_mask_total": 19632,
+  "external_protocol_freeze_and_unchanged_models": "passed",
+  "external_same_rows_baselines_and_all_metrics": "passed",
+  "external_model_predictions_independently_recomputed": "passed",
+  "external_station_hours": 22320,
+  "claim_evidence_files": "passed",
+  "research_brief_pages": 2,
+  "technical_report_pages": 10,
+  "directions": [
+    "financial engineering",
+    "data science",
+    "operations research"
+  ],
+  "personal_role": "AI-assisted; editable claims must match actual contribution",
+  "not_claimed": [
+    "real operator gains",
+    "financial returns",
+    "peer-reviewed publication",
+    "complete historical state truth",
+    "long-term uptime"
+  ]
+}

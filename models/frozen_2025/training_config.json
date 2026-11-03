@@ -1,0 +1,134 @@
+{
+  "config": {
+    "year": 2025,
+    "n_stations": 30,
+    "timezone": "America/New_York",
+    "bbox": [
+      -74.025,
+      40.695,
+      -73.925,
+      40.885
+    ],
+    "max_duration_minutes": 180,
+    "min_active_months": 8,
+    "min_training_events": 500,
+    "max_coordinate_drift_km": 0.5,
+    "capacity": 25,
+    "budget": 12,
+    "radius_km": 3.0,
+    "initial_fraction": 0.5,
+    "lower_fraction": 0.3,
+    "upper_fraction": 0.7,
+    "shortage_weight": 5.0,
+    "overflow_weight": 5.0,
+    "distance_weight": 0.1,
+    "seed": 2025,
+    "hours": 1465,
+    "solver_seconds": 5.0,
+    "event_order": "random_interleaved",
+    "data_kind": "official",
+    "observation_mode": "recorded_event_counts"
+  },
+  "selected_models": {
+    "departures": "xgboost",
+    "arrivals": "xgboost"
+  },
+  "tuning": [
+    {
+      "target": "departures",
+      "model": "poisson",
+      "params": null,
+      "validation_mae": 6.9391401488869064
+    },
+    {
+      "target": "departures",
+      "model": "xgboost",
+      "params": {
+        "n_estimators": 80,
+        "max_depth": 3,
+        "learning_rate": 0.08,
+        "min_child_weight": 5
+      },
+      "validation_mae": 5.164201893449807
+    },
+    {
+      "target": "departures",
+      "model": "xgboost",
+      "params": {
+        "n_estimators": 120,
+        "max_depth": 5,
+        "learning_rate": 0.06,
+        "min_child_weight": 10
+      },
+      "validation_mae": 4.739659098873699
+    },
+    {
+      "target": "arrivals",
+      "model": "poisson",
+      "params": null,
+      "validation_mae": 6.724376131753687
+    },
+    {
+      "target": "arrivals",
+      "model": "xgboost",
+      "params": {
+        "n_estimators": 80,
+        "max_depth": 3,
+        "learning_rate": 0.08,
+        "min_child_weight": 5
+      },
+      "validation_mae": 5.139422208692316
+    },
+    {
+      "target": "arrivals",
+      "model": "xgboost",
+      "params": {
+        "n_estimators": 120,
+        "max_depth": 5,
+        "learning_rate": 0.06,
+        "min_child_weight": 10
+      },
+      "validation_mae": 4.752970137869182
+    }
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.7.2",
+    "xgboost": "3.1.1",
+    "matplotlib": "3.10.7",
+    "pyarrow": "22.0.0"
+  },
+  "protocol": "rolling one-step; train-only preprocessing and tuning; train+validation refit for test",
+  "train_metrics": "in-sample diagnostic",
+  "eligible_rows": 257760,
+  "excluded_rows": 5040,
+  "features": [
+    "hour_of_day",
+    "day_of_week",
+    "month",
+    "weekend",
+    "holiday",
+    "hour_sin",
+    "hour_cos",
+    "week_sin",
+    "week_cos",
+    "dep_lag1",
+    "dep_lag24",
+    "dep_lag168",
+    "arr_lag1",
+    "arr_lag24",
+    "arr_lag168",
+    "dep_roll24_mean",
+    "dep_roll24_std",
+    "dep_roll168_mean",
+    "dep_roll168_std",
+    "arr_roll24_mean",
+    "arr_roll24_std",
+    "arr_roll168_mean",
+    "arr_roll168_std",
+    "station_id"
+  ]
+}

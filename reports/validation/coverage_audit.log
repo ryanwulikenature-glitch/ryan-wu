@@ -1,0 +1,5 @@
+{'max_age_minutes': 5, 'test_station_hours': 43950, 'supported_start_states': 22719, 'unsupported_start_states': 21231, 'supported_fraction': 0.5169283276450511, 'common_network_hours': 15, 'test_hours': 1465}
+{'max_age_minutes': 15, 'test_station_hours': 43950, 'supported_start_states': 33131, 'unsupported_start_states': 10819, 'supported_fraction': 0.7538339021615472, 'common_network_hours': 260, 'test_hours': 1465}
+{'max_age_minutes': 30, 'test_station_hours': 43950, 'supported_start_states': 36830, 'unsupported_start_states': 7120, 'supported_fraction': 0.8379977246871445, 'common_network_hours': 404, 'test_hours': 1465}
+{'max_age_minutes': 60, 'test_station_hours': 43950, 'supported_start_states': 39428, 'unsupported_start_states': 4522, 'supported_fraction': 0.8971103526734926, 'common_network_hours': 491, 'test_hours': 1465}
+PASS: original test metrics exactly reproduced; all past-only strata reconciled; no unknown state manufactured.

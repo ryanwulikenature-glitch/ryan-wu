@@ -1,0 +1,12 @@
+{
+  "command": "python scripts/external_202601.py",
+  "source_location": "/tmp/citibike-external-portable",
+  "same_installed_dependencies": true,
+  "original_2025_clean_partitions_or_panel_present": false,
+  "original_outputs_official_present": false,
+  "uses_published_frozen_model_and_past_context": true,
+  "raw_archive": "Same hash-verified January archive accessed by symlink; network download already independently executed in original evaluation",
+  "station_hours": 22320,
+  "predictions_and_all_metrics_exact_match": true,
+  "scope": "Relocated standalone source/data path, not a fresh-machine dependency install"
+}

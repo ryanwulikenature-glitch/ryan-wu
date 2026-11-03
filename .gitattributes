@@ -1,5 +1,6 @@
 *.pdf binary
 *.parquet binary
 *.sqlite binary
+*.joblib binary
 # Preserve captured command output (pandas tables can contain padded headers).
 *.log -whitespace
