@@ -1,0 +1,17 @@
+{
+  "latest_poll": {
+    "poll_id": "2026-11-03T08:13:48.336796+00:00_8a221588",
+    "started_utc": "2026-11-03T08:13:48.336796+00:00",
+    "completed_utc": "2026-11-03T08:13:49.614155+00:00",
+    "status": "ok",
+    "station_count": 30,
+    "scope": "prospective only, not 2025 backfill"
+  },
+  "quality_counts": {
+    "stale_or_future_source_report": 1,
+    "station_absent_from_information": 2,
+    "valid": 27
+  },
+  "daily_archive": "data/2026-11-03.jsonl.gz",
+  "scope": "Actual sample only. Check timestamp freshness and workflow run history; not a continuous-uptime claim."
+}
