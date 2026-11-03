@@ -1,0 +1,11 @@
+{
+  "historical_files_sha256": "passed",
+  "historical_identity_time_and_bounds": "passed",
+  "unsupported_hours_preserved": "passed",
+  "historical_common_state_hours": 260,
+  "weather_lead_and_common_paths": "passed",
+  "duration_baseline_exact_match": "passed",
+  "mpc_four_policy_common_requests": "passed",
+  "routing_constraints_and_failures": "passed",
+  "network60_polygons_and_accounting": "passed"
+}

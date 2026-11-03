@@ -1,0 +1,3 @@
+*.pdf binary
+*.parquet binary
+*.sqlite binary

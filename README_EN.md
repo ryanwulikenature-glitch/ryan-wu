@@ -1,8 +1,22 @@
+# Historical-evidence extension: current version
+
+The original baseline below remains reproducible. New evidence and experiments are in [the supplement](reports/historical_evidence_and_extensions.md) and [the ten-page report](reports/technical_report.pdf). Forty tests pass.
+
+We acquired 12 months of CityBikes NYC changes: 2,907,502 records for all 30 selected sites, plus 120 dated official capacity and 180 dated official status points from four/six archived feeds. Internally inconsistent capacities/counts are rejected. Exact UID/short_name identities, freshness and past-only joins are tested. Capacity corroboration matches 102/102 comparable preceding official points; unmatched points are retained. Historical common-state comparisons use 260 eligible hours and reset to measured stocks each hour.
+
+This does not resolve every historical state: unchanged counts are suppressed, including possible flag-only changes. Of 19,634 previously unknown site-hours, 3,406 have active point evidence, only two satisfy the declared all-12-five-minute-bin criterion, and the remaining 19,632 do not meet that stronger standard. Missing states are not fabricated; event-sampled empty observations are not time-weighted stockout rates.
+
+Additional executed experiments: 24-hour-lead GFS weather, six full raw-data duration cutoffs, 3-period/4-scenario stochastic MPC on 48 hours, restricted 2-truck fixed-order routing audit on 48 hours, and 60-site forecasting plus 336-hour simulation. Routing infeasibilities are reported, not silently called served. All new analyses are exploratory on the previously inspected test. Use scripts/all_research.sh to reproduce constituent steps; original raw archives are downloaded, not included in the package.
+
+Bike-share data by CityBikes contributors and available from https://data.citybik.es . CityBikes contributors. (2026) Bike-share data retrieved from https://data.citybik.es . The adapted historical database is ODbL-1.0, with underlying operator terms also applying. See data/historical/DATABASE_NOTICE.md. This notice does not relicense the software or independent official snapshots.
+
+---
+
 # NYC Citi Bike demand forecasting and optimization
 
 Official 2025 NYC completed-ride archives, 30 training-selected stations, four count predictors, integer rebalancing, and two explicit scenario simulators. The chronological experiment and tests were actually executed; results are not prefilled or synthetic evidence relabeled as real.
 
-- [Eight-page English research report](reports/technical_report.pdf)
+- [Ten-page English research report](reports/technical_report.pdf)
 - [Readable results tables](reports/results/)
 - [Data/feature dictionary](DATA_DICTIONARY.md)
 - [Mathematical formulation](reports/optimization_formulation.md)
@@ -10,7 +24,7 @@ Official 2025 NYC completed-ride archives, 30 training-selected stations, four c
 
 ## Executed evidence
 
-45,771,102 raw rows; 45,588,101 retained rides; 262,800 station-hours. Train January-August, validate September-October, test November-December. The 43,950 test rows span 1,465 hours. Three policies run over the full test horizon in both the hourly count and paired-ride scenarios. Twenty-one sensitivity/ablation configurations each run three policies for 48 hours. Thirty tests pass; two EDA notebooks are executed. All figures, model errors and uncertainty tables are generated from saved data.
+45,771,102 raw rows; 45,588,101 retained rides; 262,800 station-hours. Train January-August, validate September-October, test November-December. The 43,950 test rows span 1,465 hours. Three policies run over the full test horizon in both the hourly count and paired-ride scenarios. Twenty-one sensitivity/ablation configurations each run three policies for 48 hours. Forty tests pass; two EDA notebooks are executed. All figures, model errors and uncertainty tables are generated from saved data.
 
 XGBoost test MAE is approximately 3.418 departures and 3.398 arrivals per station-hour. Under the count-scenario assumptions, the service proxy is 90.343% with no rebalancing, 90.922% with Greedy, and 91.733% with MILP. MILP uses more bike-km than Greedy; these are not real service rates or financial effects. The report retains weaker model results and the transport/service tradeoff.
 
@@ -47,6 +61,6 @@ The count simulator uses shared seeded exogenous arrivals. The separate paired-e
 .venv/bin/python -m src.collect_gbfs --samples 2 --interval 60
 ```
 
-Two live samples have been collected for both current feeds, 2,518 stations per feed/sample. JSON, SQLite inventory rows and failure logs are retained separately under data/gbfs. Long-term observation needs continued scheduled execution. Current station IDs/capacities must not be treated as verified 2025 identifiers or history. Weather, multi-period stochastic optimization and truck VRP remain optional future research; they are not claimed as implemented.
+Two live samples have been collected for both current feeds, 2,518 stations per feed/sample. JSON, SQLite inventory rows and failure logs are retained separately under data/gbfs. Long-term observation needs continued scheduled execution. Current station IDs/capacities must not be treated as verified 2025 identifiers or history. Newly executed work includes archived 24-hour-lead weather ablation, raw duration-cutoff sensitivity, stochastic three-period MPC, restricted atomic pickup-delivery routing audits, polygon checks and a 60-site stress test. General co-loading VRP/real-road service integration and production dispatch are not claimed.
 
 Published repository: https://github.com/ryanwulikenature-glitch/ryan-wu (main). Source, reports and small evidence tables are pushed; raw data/models are regenerated or included in the separate project ZIP.

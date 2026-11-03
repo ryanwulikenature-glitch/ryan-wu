@@ -1,0 +1,11 @@
+feed,captured_at,url,sha256,stations,feed_updated,status
+station_information,20250225095241,https://web.archive.org/web/20250225095241id_/https://gbfs.citibikenyc.com/gbfs/en/station_information.json,06cec60dd699e706a340017bc1b633380d8b5332c75683bb7b0c0c4bfa469cad,2231,1740477118,downloaded
+station_information,20250623040532,https://web.archive.org/web/20250623040532id_/https://gbfs.citibikenyc.com/gbfs/en/station_information.json,241f74b7a89bbfb6209e61f3f7168e8797f5a72f84d6e9208803512380508155,2234,1750651484,downloaded
+station_information,20251107103901,https://web.archive.org/web/20251107103901id_/https://gbfs.citibikenyc.com/gbfs/en/station_information.json,1e6a4d7e35c011aa62295000c017350cd41e6c9cc91f101ca26c8053da0bea69,2308,1762511917,downloaded
+station_information,20251115152958,https://web.archive.org/web/20251115152958id_/https://gbfs.citibikenyc.com/gbfs/en/station_information.json,f30abafaf9bd541fcde2a0ea4b8af59f2f2bc16a09ce28d5b5d8577bab9ab1a5,2308,1763220557,downloaded
+station_status,20250225095241,https://web.archive.org/web/20250225095241id_/https://gbfs.citibikenyc.com/gbfs/en/station_status.json,d6dfdb5be7c7007abdcc9730714d7ed3b8a0c75caedaab898ca742952aa46f96,2231,1740477119,downloaded
+station_status,20250604143729,https://web.archive.org/web/20250604143729id_/https://gbfs.citibikenyc.com/gbfs/en/station_status.json,64ad3fade52680f25b0a5a8a46400f6d87379c2e72cbca6cbf778279872bdec6,2234,1749047812,downloaded
+station_status,20250820003359,https://web.archive.org/web/20250820003359id_/https://gbfs.citibikenyc.com/gbfs/en/station_status.json,c684f82f5a792e2d6a3b62a805c3059c9f4b1227c0fcb2bd5fa0322c05873e6e,2240,1755649980,downloaded
+station_status,20251106212808,https://web.archive.org/web/20251106212808id_/https://gbfs.citibikenyc.com/gbfs/en/station_status.json,386c96b8be7f55ed849d9f6072eceb69dcb7092e12449c37de27dd352102b933,2308,1762464436,downloaded
+station_status,20251225214256,https://web.archive.org/web/20251225214256id_/https://gbfs.citibikenyc.com/gbfs/en/station_status.json,bbf92a6e1259e484330de56eafb3a5f3ead86a664f8d87a96d35f9eddc727a9e,2322,1766698969,downloaded
+station_status,20251230064135,https://web.archive.org/web/20251230064135id_/https://gbfs.citibikenyc.com/gbfs/en/station_status.json,00adda312b25d4b148c66ef811e2ca682eea10d1c3572ae3a213b089421e2584,2322,1767076832,downloaded

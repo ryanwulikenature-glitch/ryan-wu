@@ -1,0 +1,10 @@
+strategy,departure_requests,arrival_events,unmet_departures,blocked_arrivals,bikes_moved,bike_km,scenario_objective,proxy_service_rate,mean_runtime_ms,fallback_hours,data_kind,simulation_kind,hours
+none,435223,431868,42028,38689,0,0.0,403585.0,0.9034334122966847,0.42806677882458877,0,official,hourly count-based scenario simulation,1465
+greedy,435223,431868,39483,36139,17250,8591.071039653247,378969.1071039653,0.9092809892859522,0.5102564286925194,0,official,hourly count-based scenario simulation,1465
+milp,435223,431868,35972,32632,16453,15809.97314913003,344600.997314913,0.9173481180911854,7.903654222535474,0,official,hourly count-based scenario simulation,1465
+
+target,mean_daily_MAE_difference,ci_low,ci_high,comparison
+departures,-0.030446908334134794,-0.045402920452999776,-0.016340896695657345,with 24-hour-lead GFS forecast minus no-weather; fixed XGBoost parameters
+arrivals,-0.023443564835564666,-0.04236888630295309,-0.004684472546265943,with 24-hour-lead GFS forecast minus no-weather; fixed XGBoost parameters
+
+PASS: weather ablation uses identical target samples and common simulation random paths.

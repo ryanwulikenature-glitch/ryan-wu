@@ -61,6 +61,9 @@ def select_stations(events, cfg):
     lowlon, lowlat, highlon, highlat = cfg['bbox']
     stats = stats[stats.longitude.between(lowlon,highlon) & stats.latitude.between(lowlat,highlat) &
                   (stats.active_months >= cfg['min_active_months']) & (stats.training_events >= cfg['min_training_events'])]
+    if cfg.get('geofence_path'):
+        from .geography import membership
+        stats=stats.loc[membership(stats,cfg['geofence_path'])]
     stable = []
     for sid, points in train[train.station_id.isin(stats.index)].groupby('station_id',sort=False):
         row=stats.loc[sid]

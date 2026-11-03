@@ -1,0 +1,35 @@
+{
+  "archive_months": 12,
+  "selected_stations": 30,
+  "historical_observations": 2907502,
+  "official_capacity_points": 120,
+  "official_status_points": 180,
+  "sample_supported_active_hours": 43917,
+  "previous_unknown_recovered": 2,
+  "previous_unknown_point_supported": 3406,
+  "previous_unknown_remaining": 19632,
+  "attribution": "Bike-share data by CityBikes contributors and available from https://data.citybik.es .",
+  "license": "ODbL-1.0",
+  "semantics": "CityBikes change-event samples; flags-only changes are not published; no archive record does not establish downtime, uptime or zero demand. Five-minute complete-bin support is a sampling criterion, not continuous proof. A single active point gives weaker evidence and is reported separately.",
+  "invalid_count_points": 15222,
+  "valid_fresh_points": 2888517,
+  "capacity_corroboration_matches": 102,
+  "capacity_corroboration_equal": 102,
+  "calibrated_common_hours": 260,
+  "weather_lead_hours": 24,
+  "duration_thresholds": [
+    30,
+    60,
+    90,
+    120,
+    180,
+    360
+  ],
+  "stochastic_horizon": 3,
+  "stochastic_scenarios": 4,
+  "stochastic_hours": 48,
+  "network_sites": 60,
+  "network_hours": 336,
+  "pytest_passed": 40
+}
+PASS: historical evidence, confidence levels, corroboration, enriched panel and all extension results documented without filling unsupported states.

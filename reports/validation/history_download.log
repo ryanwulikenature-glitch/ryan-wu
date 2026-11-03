@@ -1,0 +1,13 @@
+                          filename    rows    bytes
+202501-citi-bike-nyc-stats.parquet 3723028 32151033
+202502-citi-bike-nyc-stats.parquet 3440970 29231345
+202503-citi-bike-nyc-stats.parquet 4985418 42353266
+202504-citi-bike-nyc-stats.parquet 5402621 45132728
+202505-citi-bike-nyc-stats.parquet 6095439 51062781
+202506-citi-bike-nyc-stats.parquet 6375537 52977525
+202507-citi-bike-nyc-stats.parquet 6918178 57997982
+202508-citi-bike-nyc-stats.parquet 6928075 57980656
+202509-citi-bike-nyc-stats.parquet 6853854 57014265
+202510-citi-bike-nyc-stats.parquet 6421279 53451144
+202511-citi-bike-nyc-stats.parquet 5186973 43811498
+202512-citi-bike-nyc-stats.parquet 4145231 38028044

@@ -1,0 +1,31 @@
+station_id,latitude,longitude,training_events,active_months,station_name,capacity,capacity_source,selection_reason,inside_official_manhattan
+6140.05,40.74173969,-73.99415556,216344,8,W 21 St & 6 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6233.04,40.746872,-74.00821,205175,8,Pier 61 at Chelsea Piers,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+5329.03,40.71754834,-74.01322069,190311,8,West St & Chambers St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+5788.13,40.73020660529954,-73.99102628231049,189832,8,Lafayette St & E 8 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6331.01,40.749156,-73.9916,179140,8,W 31 St & 7 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6492.08,40.752568,-73.996765,175124,8,9 Ave & W 33 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6726.01,40.76030096,-73.99884222,172028,8,11 Ave & W 41 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+5905.12,40.73454567,-73.99074142,171219,8,Broadway & E 14 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+5905.14,40.734814,-73.992085,167818,8,University Pl & E 14 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6948.10,40.76695317,-73.98169333,163342,8,Broadway & W 58 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6912.01,40.7667405590595,-73.9790689945221,160406,8,7 Ave & Central Park South,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6459.07,40.752694,-74.002353,155206,8,W 30 St & 10 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+5779.11,40.73031071000895,-73.98047178983688,154524,8,Ave A & E 14 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6173.08,40.74286877312112,-73.98918628692627,154319,8,Broadway & W 25 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+5492.05,40.722103786686034,-73.99724900722504,154294,8,Cleveland Pl & Spring St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6197.08,40.74322681432173,-73.97449783980846,154062,8,E 33 St & 1 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6364.07,40.74901271,-73.98848395,152988,8,6 Ave & W 33 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6450.05,40.7505853470215,-73.9946848154068,151006,8,8 Ave & W 31 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6072.06,40.7390169121,-74.0026376103,148215,8,Greenwich Ave & 8 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+5374.01,40.7172274,-73.98802084,148198,8,Norfolk St & Broome St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6822.09,40.76500525,-73.95818491,147325,8,1 Ave & E 68 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6876.04,40.76590936,-73.97634151,142079,8,Central Park S & 6 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6602.03,40.75640548,-73.9900262,140883,8,W 41 St & 8 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+5763.03,40.73038599,-74.00214988,138766,8,Carmine St & 6 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6765.01,40.76087502,-74.00277668,138765,8,12 Ave & W 40 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6257.03,40.74487634,-73.99529885,138620,8,W 24 St & 7 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6526.05,40.75461,-73.99177,136768,8,8 Ave & W 38 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6756.01,40.76009437,-73.99461843,135092,8,W 43 St & 10 Ave,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6098.10,40.73988840858996,-73.98958593606949,134521,8,Broadway & E 21 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True
+6432.09,40.751873,-73.977706,133255,8,Park Ave & E 42 St,25,assumed,training_only_activity_bbox_and_chunk_hourly_coordinate_envelope,True

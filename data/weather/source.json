@@ -1,0 +1,16 @@
+{
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=40.75&longitude=-73.99&start_date=2025-01-01&end_date=2026-01-01&hourly=temperature_2m_previous_day1%2Cprecipitation_previous_day1%2Cwind_speed_10m_previous_day1&models=gfs_seamless&timezone=UTC",
+  "docs": "https://open-meteo.com/en/docs/previous-runs-api",
+  "provider_statement": "_previous_day1 is the value predicted 24 hours before valid time",
+  "validity": "UTC target hour; do not substitute target-hour analysis/reanalysis",
+  "model": "gfs_seamless",
+  "lead_hours": 24,
+  "rows": 8784,
+  "missing": {
+    "temperature_2m_previous_day1": 0,
+    "precipitation_previous_day1": 0,
+    "wind_speed_10m_previous_day1": 0,
+    "hour": 0,
+    "forecast_reference_offset_hours": 0
+  }
+}

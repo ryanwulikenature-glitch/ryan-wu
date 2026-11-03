@@ -28,7 +28,7 @@ def play_hour(inventory,capacity,orders):
     assert inv.sum()==inventory.sum()+served_arr-served_dep
     return inv,unmet,blocked,served_dep,served_arr
 
-def simulate(predictions,stations,cfg,out=None,forecast='selected',start=None,hours=None):
+def simulate(predictions,stations,cfg,out=None,forecast='selected',start=None,hours=None,initial_inventory=None,capacities=None):
     p=predictions.copy();p['station_id']=p.station_id.astype(str);p['hour']=pd.to_datetime(p.hour,utc=True)
     st=stations.copy();st['station_id']=st.station_id.astype(str);st=st.sort_values('station_id').reset_index(drop=True)
     if p.duplicated(['station_id','hour']).any():raise ValueError('Duplicate predictions')
@@ -36,10 +36,14 @@ def simulate(predictions,stations,cfg,out=None,forecast='selected',start=None,ho
     times=times[:hours or cfg['hours']]
     if not times:raise ValueError('No simulation hours')
     if len(times)>1 and not pd.Series(times).diff().dropna().eq(pd.Timedelta(hours=1)).all():raise ValueError('Simulation needs contiguous UTC hours; missing observations must not be silently replayed')
-    n=len(st);c=np.full(n,int(cfg['capacity']));dist=distances(st)
+    n=len(st);c=np.full(n,int(cfg['capacity'])) if capacities is None else np.asarray(capacities)
+    if c.shape!=(n,) or not np.isfinite(c).all() or (c<=0).any() or not np.equal(c,np.rint(c)).all():raise ValueError('Invalid capacity vector')
+    c=c.astype(int);dist=distances(st)
     if not 0<=cfg['initial_fraction']<=1:raise ValueError('Initial fraction must be in [0,1]')
     if cfg.get('event_order')!='random_interleaved':raise ValueError('Only declared random_interleaved event order is supported')
-    inventories={s:np.floor(c*cfg['initial_fraction']).astype(int) for s in STRATEGIES}
+    initial=np.floor(c*cfg['initial_fraction']).astype(int) if initial_inventory is None else np.asarray(initial_inventory)
+    if initial.shape!=(n,) or not np.isfinite(initial).all() or (initial<0).any() or (initial>c).any() or not np.equal(initial,np.rint(initial)).all():raise ValueError('Invalid initial inventory vector')
+    inventories={s:initial.astype(int).copy() for s in STRATEGIES}
     hourly=[];moves_log=[];inventory_log=[]
     for h,t in enumerate(times):
         frame=p[p.hour==t].set_index('station_id').reindex(st.station_id)
@@ -83,7 +87,7 @@ def simulate(predictions,stations,cfg,out=None,forecast='selected',start=None,ho
         pd.DataFrame(moves_log,columns=['timestamp','strategy','source_station','target_station','bikes_moved','distance_km','solver_status','fallback','runtime_ms','proxy_objective']).to_csv(out/'moves.csv',index=False)
         pd.DataFrame(inventory_log).to_csv(out/'inventory_trace.csv.gz',index=False)
         pd.DataFrame(compare).to_csv(out/'policy_comparison.csv',index=False);pd.DataFrame(uncertainty).to_csv(out/'uncertainty_summary.csv',index=False)
-        save_json(out/'simulation_config.json',dict(config=cfg,forecast=forecast,start=str(times[0]),hours=len(times),
+        save_json(out/'simulation_config.json',dict(config=cfg,forecast=forecast,start=str(times[0]),hours=len(times),station_order=st.station_id.tolist(),initial_inventory=initial.tolist(),capacities=c.tolist(),
                  boundary='arrivals exogenous; no ride-level causal interpretation',versions='see training_config.json'))
     return summary,hourly
 

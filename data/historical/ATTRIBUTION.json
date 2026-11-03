@@ -1,0 +1,7 @@
+{
+  "attribution": "Bike-share data by CityBikes contributors and available from https://data.citybik.es .",
+  "citation": "CityBikes contributors. (2026) Bike-share data retrieved from https://data.citybik.es .",
+  "database_license": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "scope": "CityBikes raw and derived historical databases; underlying operator terms also apply. Software is separate.",
+  "official_archives": "Internet Archive copies of official Citi Bike GBFS; sparse point observations, not continuous coverage."
+}

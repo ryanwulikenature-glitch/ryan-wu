@@ -1,0 +1,5 @@
+evidence_class,station_hours
+no_fresh_consistent_point,16198
+some_active_points_only,3404
+at_least_one_restricted_point,30
+all_12_5min_bins_active,2

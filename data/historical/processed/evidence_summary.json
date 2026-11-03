@@ -1,0 +1,14 @@
+{
+  "archive_months": 12,
+  "selected_stations": 30,
+  "historical_observations": 2907502,
+  "official_capacity_points": 120,
+  "official_status_points": 180,
+  "sample_supported_active_hours": 43917,
+  "previous_unknown_recovered": 2,
+  "previous_unknown_point_supported": 3406,
+  "previous_unknown_remaining": 19632,
+  "attribution": "Bike-share data by CityBikes contributors and available from https://data.citybik.es .",
+  "license": "ODbL-1.0",
+  "semantics": "CityBikes change-event samples; flags-only changes are not published; no archive record does not establish downtime, uptime or zero demand. Five-minute complete-bin support is a sampling criterion, not continuous proof. A single active point gives weaker evidence and is reported separately."
+}

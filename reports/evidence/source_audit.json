@@ -1,0 +1,24 @@
+{
+  "collector_start_2025_source": {
+    "commit": "353535785bd70f61e8ef3cadc26ff64211eba95c",
+    "commit_time": "2024-12-12T15:49:34Z",
+    "url": "https://raw.githubusercontent.com/citybikes/analytics/353535785bd70f61e8ef3cadc26ff64211eba95c/collect.py",
+    "scope": "source revision at 2025 period boundary; deployment continuity cannot be independently proven"
+  },
+  "collector_end_2025_source": {
+    "commit": "5cd7338c9e1502a194857d4956f594a16aecabc3",
+    "commit_time": "2025-02-11T16:22:00Z",
+    "url": "https://raw.githubusercontent.com/citybikes/analytics/5cd7338c9e1502a194857d4956f594a16aecabc3/collect.py",
+    "scope": "source revision at 2025 period boundary; deployment continuity cannot be independently proven"
+  },
+  "catalog_inspection_coverage": [
+    {
+      "first": "2013-05-28T11:57:07.000Z",
+      "last": "2020-03-13T13:11:26.000Z",
+      "rows": "94172"
+    }
+  ],
+  "comptroller_review_period": "June-July 2023; not used as 2025 evidence",
+  "citybikes_database": "https://data.citybik.es/",
+  "source_warning": "Exact source revisions support counts-only filtering; actual continuous server deployment is not independently verified. Source search is bounded; no claim that no other archive can exist."
+}

@@ -1,0 +1,13 @@
+202501-citibike-tripdata.zip 312748 selected rides
+202502-citibike-tripdata.zip 305405 selected rides
+202503-citibike-tripdata.zip 459828 selected rides
+202504-citibike-tripdata.zip 549045 selected rides
+202505-citibike-tripdata.zip 614440 selected rides
+202506-citibike-tripdata.zip 682643 selected rides
+202507-citibike-tripdata.zip 718714 selected rides
+202508-citibike-tripdata.zip 735396 selected rides
+202509-citibike-tripdata.zip 776696 selected rides
+202510-citibike-tripdata.zip 700285 selected rides
+202511-citibike-tripdata.zip 491740 selected rides
+202512-citibike-tripdata.zip 309276 selected rides
+PASS: six full raw-data duration cutoffs; 180-minute raw endpoint recomputation matches original, fixed-parameter forecasting and paired policy scenarios complete.

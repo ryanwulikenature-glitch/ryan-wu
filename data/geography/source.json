@@ -1,0 +1,8 @@
+{
+  "url": "https://data.cityofnewyork.us/resource/wh2p-dxnf.geojson",
+  "metadata": "https://data.cityofnewyork.us/api/views/wh2p-dxnf.json",
+  "version": "26c, as identified by official metadata",
+  "water_areas_included": true,
+  "scope": "administrative polygon used as a declared analysis boundary; not claimed to be archived 2025 stock/capacity evidence",
+  "original_30_inside": 30
+}

@@ -14,9 +14,9 @@ from .common import ROOT, load_config, save_json, versions
 from .features import features, NUMERIC, TARGETS
 from .metrics import forecast_metrics
 
-def model_pipeline(kind,params=None):
+def model_pipeline(kind,params=None,numeric_columns=None):
     numeric=Pipeline([('impute',SimpleImputer(strategy='median',keep_empty_features=True)),('scale',StandardScaler())])
-    transform=ColumnTransformer([('numeric',numeric,NUMERIC),('station',OneHotEncoder(handle_unknown='ignore',sparse_output=False),['station_id'])])
+    transform=ColumnTransformer([('numeric',numeric,numeric_columns or NUMERIC),('station',OneHotEncoder(handle_unknown='ignore',sparse_output=False),['station_id'])])
     estimator=PoissonRegressor(alpha=.1,max_iter=500,tol=1e-5) if kind=='poisson' else XGBRegressor(objective='count:poisson',n_jobs=2,random_state=2025,tree_method='hist',**params)
     return Pipeline([('transform',transform),('model',estimator)])
 
@@ -28,7 +28,16 @@ def train(data,out,cfg):
         # or verified operating-hour demand. Keep the audited panel unchanged.
         panel=panel.copy()
         for target in TARGETS:panel[target]=panel[f'observed_{target}']
-    f=features(panel,cfg['timezone']); f.to_parquet(data/'features.parquet',index=False)
+    f=features(panel,cfg['timezone']);numeric_columns=NUMERIC.copy()
+    if cfg.get('weather_file'):
+        weather_path=Path(cfg['weather_file']);weather_path=weather_path if weather_path.is_absolute() else ROOT/weather_path
+        weather=pd.read_parquet(weather_path)
+        cols=['temperature_2m_previous_day1','precipitation_previous_day1','wind_speed_10m_previous_day1']
+        if weather.hour.duplicated().any() or not weather.forecast_reference_offset_hours.ge(24).all():raise ValueError('Invalid weather forecast horizon/alignment')
+        f=f.merge(weather[['hour']+cols],on='hour',how='left',validate='many_to_one')
+        if f[cols].isna().any().any():raise ValueError('Incomplete archived forecast coverage')
+        numeric_columns+=cols
+    f.to_parquet(data/('features_weather.parquet' if cfg.get('weather_file') else 'features.parquet'),index=False)
     # Identical valid rows for every model; no target imputation; missing history is train-fit imputed.
     eligible=f[TARGETS+['dep_lag168','arr_lag168']].notna().all(axis=1)
     f=f.loc[eligible].copy()
@@ -41,13 +50,14 @@ def train(data,out,cfg):
         prediction_map={'last_hour':f[f'{prefix}_lag1'].fillna(0).to_numpy(), 'seasonal_naive':f[f'{prefix}_lag168'].to_numpy()}
         for kind in ['poisson','xgboost']:
             best=None; best_score=np.inf
-            for params in ([None] if kind=='poisson' else candidates):
-                model=model_pipeline(kind,params); model.fit(f.loc[train_mask],f.loc[train_mask,target])
+            target_candidates=[cfg['fixed_xgboost_params'][target]] if cfg.get('fixed_xgboost_params') else candidates
+            for params in ([None] if kind=='poisson' else target_candidates):
+                model=model_pipeline(kind,params,numeric_columns); model.fit(f.loc[train_mask],f.loc[train_mask,target])
                 score=forecast_metrics(f.loc[val_mask,target],model.predict(f.loc[val_mask]))['mae']
                 tuning.append(dict(target=target,model=kind,params=params,validation_mae=score))
                 if score<best_score: best=model; best_score=score; selected=params
             # Train/validation predictions stay from train-only model. Refit fixed hyperparameters for test.
-            p=np.maximum(0,best.predict(f)); refit=model_pipeline(kind,selected)
+            p=np.maximum(0,best.predict(f)); refit=model_pipeline(kind,selected,numeric_columns)
             refit.fit(f.loc[~test_mask],f.loc[~test_mask,target]); p[test_mask.to_numpy()]=np.maximum(0,refit.predict(f.loc[test_mask]))
             prediction_map[kind]=p; joblib.dump(refit,out/f'{target}_{kind}.joblib')
         target_scores={}
@@ -78,7 +88,7 @@ def train(data,out,cfg):
     save_json(out/'forecast_metrics.json',json.loads(metrics.to_json(orient='records')))
     save_json(out/'training_config.json',dict(config=cfg,selected_models=chosen,tuning=tuning,versions=versions(),
                 protocol='rolling one-step; train-only preprocessing and tuning; train+validation refit for test',
-                train_metrics='in-sample diagnostic',eligible_rows=len(f),excluded_rows=len(panel)-len(f),features=NUMERIC+['station_id']))
+                train_metrics='in-sample diagnostic',eligible_rows=len(f),excluded_rows=len(panel)-len(f),features=numeric_columns+['station_id']))
     return test,metrics
 
 if __name__=='__main__':

@@ -32,6 +32,8 @@ def download(year=2025, months=range(1, 13), root=ROOT / 'data'):
                 with zipfile.ZipFile(tmp) as z:
                     bad = z.testzip()
                     if bad: raise ValueError(f'ZIP CRC error: {bad}')
+                if previous and sha256(tmp)!=previous['sha256']:
+                    raise ValueError(f'New download differs from recorded SHA256: {dest}; investigate source revision before replacing expected evidence')
                 os.replace(tmp, dest)
             finally:
                 tmp.unlink(missing_ok=True)

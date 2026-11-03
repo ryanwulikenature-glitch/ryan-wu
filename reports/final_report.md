@@ -1,3 +1,5 @@
+> Baseline report retained. Historical evidence and all newly executed extensions supersede earlier missing-source statements; see historical_evidence_and_extensions.md and the 10-page technical_report.pdf.
+
 # NYC Citi Bike — reproducible technical report
 
 ## 1. Problem Definition

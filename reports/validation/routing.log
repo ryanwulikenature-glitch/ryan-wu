@@ -1,0 +1,7 @@
+strategy  status                                                                                          
+greedy    2:The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)    28
+          optimal_with_requested_gap_1pct                                                                     20
+milp      2:The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)    29
+          optimal_no_jobs                                                                                      1
+          optimal_with_requested_gap_1pct                                                                     18
+PASS: successful routes checked for job uniqueness, capacity, pickup-before-delivery and shift limits; unresolved jobs remain explicitly unserved.

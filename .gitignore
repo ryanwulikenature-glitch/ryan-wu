@@ -9,3 +9,8 @@ data/demo/
 outputs/**
 !outputs/.gitkeep
 data/gbfs/
+data/external/
+data/duration/
+data/historical/raw/
+data/historical/directory.json
+data/network60/
