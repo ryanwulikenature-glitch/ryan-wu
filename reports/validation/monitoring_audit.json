@@ -1,4 +1,9 @@
 {
+  "assessment_utc": "2026-11-04T10:06:03.254483+00:00",
+  "receipt": "reports/validation/collection_receipts/2026-11-04T100603Z.json",
+  "audited_main_sha": "9a78e6aa2ba00fc41f72ecca3ade7a0093d5eb8b",
+  "archive_branch_head": "bb945388e996340961df406321083a93b761e579",
+  "workflow_state": "active",
   "local": {
     "polls": 76,
     "first_poll_utc": "2026-11-03T07:35:07.760597+00:00",
@@ -20,17 +25,19 @@
     "minimum_window_observed": false,
     "all_observed_gaps_within_threshold": false,
     "continuous_uptime_verified": false,
-    "interpretation": "Dated snapshots only. Gap compliance is a polling diagnostic, not proof of continuous station operation, latent demand or future service availability."
+    "interpretation": "Dated snapshots only. Gap compliance is a polling diagnostic, not proof of continuous station operation, latent demand or future service availability.",
+    "evidence": "Committed 2026-11-03 local database snapshot, not a live local-collector probe",
+    "snapshot_path": "reports/evidence/telemetry/inventory.sqlite"
   },
   "github": {
-    "polls": 4,
+    "polls": 34,
     "first_poll_utc": "2026-11-03T07:43:56.323446+00:00",
-    "last_poll_utc": "2026-11-03T08:33:20.637399+00:00",
-    "observed_span_hours": 0.8234205425,
+    "last_poll_utc": "2026-11-04T09:49:42.827652+00:00",
+    "observed_span_hours": 26.096251168333332,
     "expected_seconds": 300,
     "gap_threshold_seconds": 600,
-    "median_gap_seconds": 897.53296,
-    "max_gap_seconds": 1792.01335,
+    "median_gap_seconds": 2872.620991,
+    "max_gap_seconds": 4250.591739,
     "long_gaps": [
       {
         "start": "2026-11-03T07:43:56.323446+00:00",
@@ -41,18 +48,572 @@
         "start": "2026-11-03T08:13:48.336796+00:00",
         "end": "2026-11-03T08:28:45.869756+00:00",
         "seconds": 897.53296
+      },
+      {
+        "start": "2026-11-03T08:33:20.637399+00:00",
+        "end": "2026-11-03T09:21:11.448341+00:00",
+        "seconds": 2870.810942
+      },
+      {
+        "start": "2026-11-03T09:21:11.448341+00:00",
+        "end": "2026-11-03T10:16:20.218357+00:00",
+        "seconds": 3308.770016
+      },
+      {
+        "start": "2026-11-03T10:16:20.218357+00:00",
+        "end": "2026-11-03T11:11:25.079163+00:00",
+        "seconds": 3304.860806
+      },
+      {
+        "start": "2026-11-03T11:11:25.079163+00:00",
+        "end": "2026-11-03T11:55:34.056546+00:00",
+        "seconds": 2648.977383
+      },
+      {
+        "start": "2026-11-03T11:55:34.056546+00:00",
+        "end": "2026-11-03T12:46:28.131291+00:00",
+        "seconds": 3054.074745
+      },
+      {
+        "start": "2026-11-03T12:46:28.131291+00:00",
+        "end": "2026-11-03T13:55:17.417456+00:00",
+        "seconds": 4129.286165
+      },
+      {
+        "start": "2026-11-03T13:55:17.417456+00:00",
+        "end": "2026-11-03T14:42:52.085872+00:00",
+        "seconds": 2854.668416
+      },
+      {
+        "start": "2026-11-03T14:42:52.085872+00:00",
+        "end": "2026-11-03T15:26:21.955167+00:00",
+        "seconds": 2609.869295
+      },
+      {
+        "start": "2026-11-03T15:26:21.955167+00:00",
+        "end": "2026-11-03T16:21:06.251603+00:00",
+        "seconds": 3284.296436
+      },
+      {
+        "start": "2026-11-03T16:21:06.251603+00:00",
+        "end": "2026-11-03T17:19:11.337942+00:00",
+        "seconds": 3485.086339
+      },
+      {
+        "start": "2026-11-03T17:19:11.337942+00:00",
+        "end": "2026-11-03T18:04:53.161260+00:00",
+        "seconds": 2741.823318
+      },
+      {
+        "start": "2026-11-03T18:04:53.161260+00:00",
+        "end": "2026-11-03T18:52:30.114666+00:00",
+        "seconds": 2856.953406
+      },
+      {
+        "start": "2026-11-03T18:52:30.114666+00:00",
+        "end": "2026-11-03T19:38:04.838082+00:00",
+        "seconds": 2734.723416
+      },
+      {
+        "start": "2026-11-03T19:38:04.838082+00:00",
+        "end": "2026-11-03T20:26:18.390175+00:00",
+        "seconds": 2893.552093
+      },
+      {
+        "start": "2026-11-03T20:26:18.390175+00:00",
+        "end": "2026-11-03T21:14:08.567543+00:00",
+        "seconds": 2870.177368
+      },
+      {
+        "start": "2026-11-03T21:14:08.567543+00:00",
+        "end": "2026-11-03T21:57:10.581341+00:00",
+        "seconds": 2582.013798
+      },
+      {
+        "start": "2026-11-03T21:57:10.581341+00:00",
+        "end": "2026-11-03T22:32:29.164186+00:00",
+        "seconds": 2118.582845
+      },
+      {
+        "start": "2026-11-03T22:32:29.164186+00:00",
+        "end": "2026-11-03T23:17:13.773445+00:00",
+        "seconds": 2684.609259
+      },
+      {
+        "start": "2026-11-03T23:17:13.773445+00:00",
+        "end": "2026-11-03T23:53:44.523324+00:00",
+        "seconds": 2190.749879
+      },
+      {
+        "start": "2026-11-03T23:53:44.523324+00:00",
+        "end": "2026-11-04T00:28:29.250516+00:00",
+        "seconds": 2084.727192
+      },
+      {
+        "start": "2026-11-04T00:28:29.250516+00:00",
+        "end": "2026-11-04T01:36:39.320504+00:00",
+        "seconds": 4090.069988
+      },
+      {
+        "start": "2026-11-04T01:36:39.320504+00:00",
+        "end": "2026-11-04T02:24:31.941495+00:00",
+        "seconds": 2872.620991
+      },
+      {
+        "start": "2026-11-04T02:24:31.941495+00:00",
+        "end": "2026-11-04T03:14:50.296351+00:00",
+        "seconds": 3018.354856
+      },
+      {
+        "start": "2026-11-04T03:14:50.296351+00:00",
+        "end": "2026-11-04T04:08:33.022746+00:00",
+        "seconds": 3222.726395
+      },
+      {
+        "start": "2026-11-04T04:08:33.022746+00:00",
+        "end": "2026-11-04T05:00:26.814056+00:00",
+        "seconds": 3113.79131
+      },
+      {
+        "start": "2026-11-04T05:00:26.814056+00:00",
+        "end": "2026-11-04T05:54:57.811083+00:00",
+        "seconds": 3270.997027
+      },
+      {
+        "start": "2026-11-04T05:54:57.811083+00:00",
+        "end": "2026-11-04T06:51:57.195564+00:00",
+        "seconds": 3419.384481
+      },
+      {
+        "start": "2026-11-04T06:51:57.195564+00:00",
+        "end": "2026-11-04T08:02:47.787303+00:00",
+        "seconds": 4250.591739
+      },
+      {
+        "start": "2026-11-04T08:02:47.787303+00:00",
+        "end": "2026-11-04T08:55:34.508563+00:00",
+        "seconds": 3166.72126
+      },
+      {
+        "start": "2026-11-04T08:55:34.508563+00:00",
+        "end": "2026-11-04T09:49:42.827652+00:00",
+        "seconds": 3248.319089
       }
     ],
     "failed_polls": 0,
     "minimum_window_hours": 24,
-    "minimum_window_observed": false,
+    "minimum_window_observed": true,
     "all_observed_gaps_within_threshold": false,
     "continuous_uptime_verified": false,
-    "interpretation": "Dated snapshots only. Gap compliance is a polling diagnostic, not proof of continuous station operation, latent demand or future service availability."
+    "interpretation": "Dated snapshots only. Gap compliance is a polling diagnostic, not proof of continuous station operation, latent demand or future service availability.",
+    "assessment_utc": "2026-11-04T10:06:03.254483+00:00",
+    "observed_span_seconds": 93946.504206,
+    "seconds_since_latest_poll": 980.426831,
+    "tail_within_gap_threshold": false,
+    "observed_gap_count": 33,
+    "gaps_exceeding_target": 32,
+    "long_gap_count": 32
   },
-  "successful_schedule_runs": 0,
-  "successful_scheduled_polls_linked_to_run_ids": 0,
-  "schedule_trigger_verified": false,
-  "archive_and_schedule_link_verified": false,
-  "scope": "Observed windows only. Historic/current unmatched station IDs remain unknown; no historical backfill or long-term uptime claim."
+  "github_usable_polls": {
+    "polls": 34,
+    "first_poll_utc": "2026-11-03T07:43:56.323446+00:00",
+    "last_poll_utc": "2026-11-04T09:49:42.827652+00:00",
+    "observed_span_hours": 26.096251168333332,
+    "expected_seconds": 300,
+    "gap_threshold_seconds": 600,
+    "median_gap_seconds": 2872.620991,
+    "max_gap_seconds": 4250.591739,
+    "long_gaps": [
+      {
+        "start": "2026-11-03T07:43:56.323446+00:00",
+        "end": "2026-11-03T08:13:48.336796+00:00",
+        "seconds": 1792.01335
+      },
+      {
+        "start": "2026-11-03T08:13:48.336796+00:00",
+        "end": "2026-11-03T08:28:45.869756+00:00",
+        "seconds": 897.53296
+      },
+      {
+        "start": "2026-11-03T08:33:20.637399+00:00",
+        "end": "2026-11-03T09:21:11.448341+00:00",
+        "seconds": 2870.810942
+      },
+      {
+        "start": "2026-11-03T09:21:11.448341+00:00",
+        "end": "2026-11-03T10:16:20.218357+00:00",
+        "seconds": 3308.770016
+      },
+      {
+        "start": "2026-11-03T10:16:20.218357+00:00",
+        "end": "2026-11-03T11:11:25.079163+00:00",
+        "seconds": 3304.860806
+      },
+      {
+        "start": "2026-11-03T11:11:25.079163+00:00",
+        "end": "2026-11-03T11:55:34.056546+00:00",
+        "seconds": 2648.977383
+      },
+      {
+        "start": "2026-11-03T11:55:34.056546+00:00",
+        "end": "2026-11-03T12:46:28.131291+00:00",
+        "seconds": 3054.074745
+      },
+      {
+        "start": "2026-11-03T12:46:28.131291+00:00",
+        "end": "2026-11-03T13:55:17.417456+00:00",
+        "seconds": 4129.286165
+      },
+      {
+        "start": "2026-11-03T13:55:17.417456+00:00",
+        "end": "2026-11-03T14:42:52.085872+00:00",
+        "seconds": 2854.668416
+      },
+      {
+        "start": "2026-11-03T14:42:52.085872+00:00",
+        "end": "2026-11-03T15:26:21.955167+00:00",
+        "seconds": 2609.869295
+      },
+      {
+        "start": "2026-11-03T15:26:21.955167+00:00",
+        "end": "2026-11-03T16:21:06.251603+00:00",
+        "seconds": 3284.296436
+      },
+      {
+        "start": "2026-11-03T16:21:06.251603+00:00",
+        "end": "2026-11-03T17:19:11.337942+00:00",
+        "seconds": 3485.086339
+      },
+      {
+        "start": "2026-11-03T17:19:11.337942+00:00",
+        "end": "2026-11-03T18:04:53.161260+00:00",
+        "seconds": 2741.823318
+      },
+      {
+        "start": "2026-11-03T18:04:53.161260+00:00",
+        "end": "2026-11-03T18:52:30.114666+00:00",
+        "seconds": 2856.953406
+      },
+      {
+        "start": "2026-11-03T18:52:30.114666+00:00",
+        "end": "2026-11-03T19:38:04.838082+00:00",
+        "seconds": 2734.723416
+      },
+      {
+        "start": "2026-11-03T19:38:04.838082+00:00",
+        "end": "2026-11-03T20:26:18.390175+00:00",
+        "seconds": 2893.552093
+      },
+      {
+        "start": "2026-11-03T20:26:18.390175+00:00",
+        "end": "2026-11-03T21:14:08.567543+00:00",
+        "seconds": 2870.177368
+      },
+      {
+        "start": "2026-11-03T21:14:08.567543+00:00",
+        "end": "2026-11-03T21:57:10.581341+00:00",
+        "seconds": 2582.013798
+      },
+      {
+        "start": "2026-11-03T21:57:10.581341+00:00",
+        "end": "2026-11-03T22:32:29.164186+00:00",
+        "seconds": 2118.582845
+      },
+      {
+        "start": "2026-11-03T22:32:29.164186+00:00",
+        "end": "2026-11-03T23:17:13.773445+00:00",
+        "seconds": 2684.609259
+      },
+      {
+        "start": "2026-11-03T23:17:13.773445+00:00",
+        "end": "2026-11-03T23:53:44.523324+00:00",
+        "seconds": 2190.749879
+      },
+      {
+        "start": "2026-11-03T23:53:44.523324+00:00",
+        "end": "2026-11-04T00:28:29.250516+00:00",
+        "seconds": 2084.727192
+      },
+      {
+        "start": "2026-11-04T00:28:29.250516+00:00",
+        "end": "2026-11-04T01:36:39.320504+00:00",
+        "seconds": 4090.069988
+      },
+      {
+        "start": "2026-11-04T01:36:39.320504+00:00",
+        "end": "2026-11-04T02:24:31.941495+00:00",
+        "seconds": 2872.620991
+      },
+      {
+        "start": "2026-11-04T02:24:31.941495+00:00",
+        "end": "2026-11-04T03:14:50.296351+00:00",
+        "seconds": 3018.354856
+      },
+      {
+        "start": "2026-11-04T03:14:50.296351+00:00",
+        "end": "2026-11-04T04:08:33.022746+00:00",
+        "seconds": 3222.726395
+      },
+      {
+        "start": "2026-11-04T04:08:33.022746+00:00",
+        "end": "2026-11-04T05:00:26.814056+00:00",
+        "seconds": 3113.79131
+      },
+      {
+        "start": "2026-11-04T05:00:26.814056+00:00",
+        "end": "2026-11-04T05:54:57.811083+00:00",
+        "seconds": 3270.997027
+      },
+      {
+        "start": "2026-11-04T05:54:57.811083+00:00",
+        "end": "2026-11-04T06:51:57.195564+00:00",
+        "seconds": 3419.384481
+      },
+      {
+        "start": "2026-11-04T06:51:57.195564+00:00",
+        "end": "2026-11-04T08:02:47.787303+00:00",
+        "seconds": 4250.591739
+      },
+      {
+        "start": "2026-11-04T08:02:47.787303+00:00",
+        "end": "2026-11-04T08:55:34.508563+00:00",
+        "seconds": 3166.72126
+      },
+      {
+        "start": "2026-11-04T08:55:34.508563+00:00",
+        "end": "2026-11-04T09:49:42.827652+00:00",
+        "seconds": 3248.319089
+      }
+    ],
+    "failed_polls": 0,
+    "minimum_window_hours": 24,
+    "minimum_window_observed": true,
+    "all_observed_gaps_within_threshold": false,
+    "continuous_uptime_verified": false,
+    "interpretation": "Dated snapshots only. Gap compliance is a polling diagnostic, not proof of continuous station operation, latent demand or future service availability.",
+    "assessment_utc": "2026-11-04T10:06:03.254483+00:00",
+    "observed_span_seconds": 93946.504206,
+    "seconds_since_latest_poll": 980.426831,
+    "tail_within_gap_threshold": false,
+    "observed_gap_count": 33,
+    "gaps_exceeding_target": 32,
+    "long_gap_count": 32
+  },
+  "github_successful_schedule": {
+    "polls": 30,
+    "first_poll_utc": "2026-11-03T09:21:11.448341+00:00",
+    "last_poll_utc": "2026-11-04T09:49:42.827652+00:00",
+    "observed_span_hours": 24.475383141944445,
+    "expected_seconds": 300,
+    "gap_threshold_seconds": 600,
+    "median_gap_seconds": 3018.354856,
+    "max_gap_seconds": 4250.591739,
+    "long_gaps": [
+      {
+        "start": "2026-11-03T09:21:11.448341+00:00",
+        "end": "2026-11-03T10:16:20.218357+00:00",
+        "seconds": 3308.770016
+      },
+      {
+        "start": "2026-11-03T10:16:20.218357+00:00",
+        "end": "2026-11-03T11:11:25.079163+00:00",
+        "seconds": 3304.860806
+      },
+      {
+        "start": "2026-11-03T11:11:25.079163+00:00",
+        "end": "2026-11-03T11:55:34.056546+00:00",
+        "seconds": 2648.977383
+      },
+      {
+        "start": "2026-11-03T11:55:34.056546+00:00",
+        "end": "2026-11-03T12:46:28.131291+00:00",
+        "seconds": 3054.074745
+      },
+      {
+        "start": "2026-11-03T12:46:28.131291+00:00",
+        "end": "2026-11-03T13:55:17.417456+00:00",
+        "seconds": 4129.286165
+      },
+      {
+        "start": "2026-11-03T13:55:17.417456+00:00",
+        "end": "2026-11-03T14:42:52.085872+00:00",
+        "seconds": 2854.668416
+      },
+      {
+        "start": "2026-11-03T14:42:52.085872+00:00",
+        "end": "2026-11-03T15:26:21.955167+00:00",
+        "seconds": 2609.869295
+      },
+      {
+        "start": "2026-11-03T15:26:21.955167+00:00",
+        "end": "2026-11-03T16:21:06.251603+00:00",
+        "seconds": 3284.296436
+      },
+      {
+        "start": "2026-11-03T16:21:06.251603+00:00",
+        "end": "2026-11-03T17:19:11.337942+00:00",
+        "seconds": 3485.086339
+      },
+      {
+        "start": "2026-11-03T17:19:11.337942+00:00",
+        "end": "2026-11-03T18:04:53.161260+00:00",
+        "seconds": 2741.823318
+      },
+      {
+        "start": "2026-11-03T18:04:53.161260+00:00",
+        "end": "2026-11-03T18:52:30.114666+00:00",
+        "seconds": 2856.953406
+      },
+      {
+        "start": "2026-11-03T18:52:30.114666+00:00",
+        "end": "2026-11-03T19:38:04.838082+00:00",
+        "seconds": 2734.723416
+      },
+      {
+        "start": "2026-11-03T19:38:04.838082+00:00",
+        "end": "2026-11-03T20:26:18.390175+00:00",
+        "seconds": 2893.552093
+      },
+      {
+        "start": "2026-11-03T20:26:18.390175+00:00",
+        "end": "2026-11-03T21:14:08.567543+00:00",
+        "seconds": 2870.177368
+      },
+      {
+        "start": "2026-11-03T21:14:08.567543+00:00",
+        "end": "2026-11-03T21:57:10.581341+00:00",
+        "seconds": 2582.013798
+      },
+      {
+        "start": "2026-11-03T21:57:10.581341+00:00",
+        "end": "2026-11-03T22:32:29.164186+00:00",
+        "seconds": 2118.582845
+      },
+      {
+        "start": "2026-11-03T22:32:29.164186+00:00",
+        "end": "2026-11-03T23:17:13.773445+00:00",
+        "seconds": 2684.609259
+      },
+      {
+        "start": "2026-11-03T23:17:13.773445+00:00",
+        "end": "2026-11-03T23:53:44.523324+00:00",
+        "seconds": 2190.749879
+      },
+      {
+        "start": "2026-11-03T23:53:44.523324+00:00",
+        "end": "2026-11-04T00:28:29.250516+00:00",
+        "seconds": 2084.727192
+      },
+      {
+        "start": "2026-11-04T00:28:29.250516+00:00",
+        "end": "2026-11-04T01:36:39.320504+00:00",
+        "seconds": 4090.069988
+      },
+      {
+        "start": "2026-11-04T01:36:39.320504+00:00",
+        "end": "2026-11-04T02:24:31.941495+00:00",
+        "seconds": 2872.620991
+      },
+      {
+        "start": "2026-11-04T02:24:31.941495+00:00",
+        "end": "2026-11-04T03:14:50.296351+00:00",
+        "seconds": 3018.354856
+      },
+      {
+        "start": "2026-11-04T03:14:50.296351+00:00",
+        "end": "2026-11-04T04:08:33.022746+00:00",
+        "seconds": 3222.726395
+      },
+      {
+        "start": "2026-11-04T04:08:33.022746+00:00",
+        "end": "2026-11-04T05:00:26.814056+00:00",
+        "seconds": 3113.79131
+      },
+      {
+        "start": "2026-11-04T05:00:26.814056+00:00",
+        "end": "2026-11-04T05:54:57.811083+00:00",
+        "seconds": 3270.997027
+      },
+      {
+        "start": "2026-11-04T05:54:57.811083+00:00",
+        "end": "2026-11-04T06:51:57.195564+00:00",
+        "seconds": 3419.384481
+      },
+      {
+        "start": "2026-11-04T06:51:57.195564+00:00",
+        "end": "2026-11-04T08:02:47.787303+00:00",
+        "seconds": 4250.591739
+      },
+      {
+        "start": "2026-11-04T08:02:47.787303+00:00",
+        "end": "2026-11-04T08:55:34.508563+00:00",
+        "seconds": 3166.72126
+      },
+      {
+        "start": "2026-11-04T08:55:34.508563+00:00",
+        "end": "2026-11-04T09:49:42.827652+00:00",
+        "seconds": 3248.319089
+      }
+    ],
+    "failed_polls": 0,
+    "minimum_window_hours": 24,
+    "minimum_window_observed": true,
+    "all_observed_gaps_within_threshold": false,
+    "continuous_uptime_verified": false,
+    "interpretation": "Dated snapshots only. Gap compliance is a polling diagnostic, not proof of continuous station operation, latent demand or future service availability.",
+    "assessment_utc": "2026-11-04T10:06:03.254483+00:00",
+    "observed_span_seconds": 88111.379311,
+    "seconds_since_latest_poll": 980.426831,
+    "tail_within_gap_threshold": false,
+    "observed_gap_count": 29,
+    "gaps_exceeding_target": 29,
+    "long_gap_count": 29
+  },
+  "successful_schedule_runs": 30,
+  "successful_scheduled_polls_linked_to_run_ids": 30,
+  "schedule_trigger_verified": true,
+  "archive_and_schedule_link_verified": true,
+  "feed_fetch_failures": 0,
+  "unmatched_successful_schedule_run_ids": [],
+  "archive_polls_without_matching_workflow_attempt": 3,
+  "successful_push_run_ids_without_exact_match": [
+    41598241044,
+    41601698448,
+    41603556749
+  ],
+  "sqlite_restoration": {
+    "polls": 34,
+    "fetches": 68,
+    "observations": 1020,
+    "integrity_check": [
+      "ok"
+    ],
+    "foreign_key_check": []
+  },
+  "scheduled_run_creation_to_poll_seconds": {
+    "min": 6.022746,
+    "max": 42.114666
+  },
+  "observations_by_quality": {
+    "inconsistent_capacity_counts": 4,
+    "stale_or_future_source_report": 11,
+    "station_absent_from_information": 68,
+    "valid": 937
+  },
+  "stale_or_future_station_row_breakdown": {
+    "older_than_300_seconds": 11
+  },
+  "latest_poll_run_id": 41810134169,
+  "latest_poll_nonvalid_stations": [
+    {
+      "station_id": "5329.03",
+      "quality": "station_absent_from_information"
+    },
+    {
+      "station_id": "5788.13",
+      "quality": "station_absent_from_information"
+    }
+  ],
+  "status": "collection_observed_with_cadence_gaps",
+  "scope": "Prospective normalized GBFS snapshots. Timestamp span and cadence diagnostics do not measure station uptime, fill gaps or backfill 2025."
 }
