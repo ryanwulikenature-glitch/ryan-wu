@@ -1,16 +1,16 @@
 {
   "latest_poll": {
-    "poll_id": "2026-11-07T22:08:12.613009+00:00_17d6ee36",
-    "started_utc": "2026-11-07T22:08:12.613009+00:00",
-    "completed_utc": "2026-11-07T22:08:13.958201+00:00",
+    "poll_id": "2026-11-08T01:23:34.219930+00:00_62c09654",
+    "started_utc": "2026-11-08T01:23:34.219930+00:00",
+    "completed_utc": "2026-11-08T01:23:34.823814+00:00",
     "status": "ok",
     "station_count": 30,
-    "scope": "github_actions_run=42419157563; attempt=1; event=schedule; prospective only"
+    "scope": "github_actions_run=42434048994; attempt=1; event=schedule; prospective only"
   },
   "quality_counts": {
     "station_absent_from_information": 2,
     "valid": 28
   },
-  "daily_archive": "data/2026-11-07.jsonl.gz",
+  "daily_archive": "data/2026-11-08.jsonl.gz",
   "scope": "Actual sample only. Check timestamp freshness and workflow run history; not a continuous-uptime claim."
 }
