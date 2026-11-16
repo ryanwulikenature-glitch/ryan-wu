@@ -1,11 +1,11 @@
 {
   "latest_poll": {
-    "poll_id": "2026-11-16T01:53:17.462491+00:00_a0e86473",
-    "started_utc": "2026-11-16T01:53:17.462491+00:00",
-    "completed_utc": "2026-11-16T01:53:17.937599+00:00",
+    "poll_id": "2026-11-16T08:44:24.129361+00:00_23146467",
+    "started_utc": "2026-11-16T08:44:24.129361+00:00",
+    "completed_utc": "2026-11-16T08:44:24.645779+00:00",
     "status": "ok",
     "station_count": 30,
-    "scope": "github_actions_run=43788848803; attempt=1; event=schedule; prospective only"
+    "scope": "github_actions_run=43833665104; attempt=1; event=schedule; prospective only"
   },
   "quality_counts": {
     "station_absent_from_information": 2,
